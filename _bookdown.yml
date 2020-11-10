@@ -1,4 +1,4 @@
-book_filename: "GitHub documentation"
+book_filename: "GitHub-documentation"
 delete_merged_file: true
 output_dir: "docs"
 language:
