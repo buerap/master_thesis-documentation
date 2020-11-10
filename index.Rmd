@@ -3,7 +3,7 @@ title: "Documentation master thesis"
 author: "Raphael S. von Büren"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::pdf_book
+output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
