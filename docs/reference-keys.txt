@@ -1,10 +1,11 @@
 fig:nice-fig
 tab:nice-tab
 prerequisites
-introduction
+intro
+data-structure
+observational-study
+statistical-analyses
+references
+r-packages
 literature
-methods
-applications
-example-one
-example-two
 final-words

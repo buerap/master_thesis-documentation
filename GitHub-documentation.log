@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.11.9)  10 NOV 2020 12:02
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.11.9)  10 NOV 2020 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -761,21 +761,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] (./GitHub-documentation.toc
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 6.
+(Font)              scaled to size 7.0pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 6.
+(Font)              scaled to size 5.0pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 6.
+(Font)              scaled to size 10.00092pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 6.
+(Font)              scaled to size 7.00064pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 6.
+(Font)              scaled to size 5.00046pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 6.
+(Font)              scaled to size 9.99893pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 6.
+(Font)              scaled to size 6.99925pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 6.
+(Font)              scaled to size 4.99947pt on input line 4.
 )
 \tf@toc=\write5
 \openout5 = `GitHub-documentation.toc'.
@@ -791,7 +791,7 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 ]
 Chapter 2.
 
-LaTeX Warning: Reference `intro' on page 7 undefined on input line 145.
+LaTeX Warning: Reference `methods' on page 7 undefined on input line 145.
 
 File: GitHub-documentation_files/figure-latex/nice-fig-1.pdf Graphic file (type
  pdf)
@@ -816,16 +816,16 @@ Chapter 6.
 
 ]) [17] (./GitHub-documentation.aux)
 Package rerunfilecheck Info: File `GitHub-documentation.out' has not changed.
-(rerunfilecheck)             Checksum: 0C27465FD868A0B010110E65C1CA07B8;810.
+(rerunfilecheck)             Checksum: 8FD121CDAEB050891C334F20824C8D57;1030.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16312 strings out of 479393
- 289381 string characters out of 5878762
- 730101 words of memory out of 5000000
- 35476 multiletter control sequences out of 15000+600000
+ 16314 strings out of 479393
+ 289421 string characters out of 5878762
+ 730278 words of memory out of 5000000
+ 35478 multiletter control sequences out of 15000+600000
  541555 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,8n,118p,356b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
