@@ -4,11 +4,11 @@ Here is a review of existing methods.
 
 ## Observational study
 
-tbl.test <- read.csv("_bookdown_files/GitHub-documentation_files/table-csv/test.csv")
-
-```{r nice-tab, tidy=FALSE}
+```{r test-table, tidy=FALSE}
+library(tidyverse)
+tbl.test <- read_csv("_bookdown_files/GitHub-documentation_files/table-csv/test.csv", col_names = T)
 knitr::kable(
-  head(tbl.test, 20), caption = 'Here is a nice table!',
+  head(tbl.test, 20), caption = 'Here is a TEST table!',
   booktabs = TRUE
 )
 ```
