@@ -24,7 +24,7 @@
 <meta name="author" content="Raphael S. von Büren" />
 
 
-<meta name="date" content="2021-01-07" />
+<meta name="date" content="2021-01-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -172,77 +172,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 3</span> Data structure</h1>
 <p>Here is a review of existing methods (and I try a test here).
 The tables are available under <code>tbl(db, "helle")</code>
-Zunächst laden wir <code>library(tidyverse)</code></p>
+Zunächst laden wir `` und</p>
 <div id="observational-study" class="section level2">
 <h2><span class="header-section-number">3.1</span> Observational study</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="data-structure.html#cb4-1"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
-<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
-## ✓ tibble  3.0.4     ✓ dplyr   1.0.2
-## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
-## ✓ readr   1.4.0     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="data-structure.html#cb8-1"></a>tbl.test &lt;-<span class="st"> </span><span class="kw">head</span>(iris)</span>
-<span id="cb8-2"><a href="data-structure.html#cb8-2"></a><span class="co">#tbl.test &lt;- read_csv(&quot;_bookdown_files/GitHub-documentation_files/table-csv/test.csv&quot;, col_names = T)</span></span>
-<span id="cb8-3"><a href="data-structure.html#cb8-3"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
-<span id="cb8-4"><a href="data-structure.html#cb8-4"></a>  <span class="kw">head</span>(tbl.test, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a TEST table!&#39;</span>,</span>
-<span id="cb8-5"><a href="data-structure.html#cb8-5"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
-<span id="cb8-6"><a href="data-structure.html#cb8-6"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="data-structure.html#cb4-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
+<span id="cb4-2"><a href="data-structure.html#cb4-2"></a>  <span class="kw">head</span>(tbl.test, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a TEST table!&#39;</span>,</span>
+<span id="cb4-3"><a href="data-structure.html#cb4-3"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
+<span id="cb4-4"><a href="data-structure.html#cb4-4"></a>)</span></code></pre></div>
 <table>
 <caption><span id="tab:test-table">Table 3.1: </span>Here is a TEST table!</caption>
+<colgroup>
+<col width="8%" />
+<col width="20%" />
+<col width="71%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th align="right">Sepal.Length</th>
-<th align="right">Sepal.Width</th>
-<th align="right">Petal.Length</th>
-<th align="right">Petal.Width</th>
-<th align="left">Species</th>
+<th align="left">Name</th>
+<th align="left">voller_Name</th>
+<th align="left">Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.7</td>
-<td align="right">3.2</td>
-<td align="right">1.3</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.6</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.0</td>
-<td align="right">3.6</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.7</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
+<td align="left">ID_STAO</td>
+<td align="left">ID des Standortes</td>
+<td align="left">Diese Zahl ist ein Test und wird gebraucht als Verknüpfungsfeld</td>
 </tr>
 </tbody>
 </table>
