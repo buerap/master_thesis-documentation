@@ -12,7 +12,15 @@ description: "Documentation of master thesis of Raphael S. von Büren, Departmen
 ---
 
 ```{r setup-index, include = FALSE, message = FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+
+# Libraries
 library(tidyverse)
+
+# Read data
 tbl.test <- readr::read_csv(file = "docs/GitHub-documentation_files/test.csv", col_names = T)
 ```
 
@@ -31,9 +39,7 @@ install.packages("bookdown")
 
 Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
 
-```{r include = FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
+**The documentation was build with the following R version:**
+```{r echo = FALSE, }
+writeLines(R.version$version.string)
 ```
