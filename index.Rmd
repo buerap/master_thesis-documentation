@@ -11,6 +11,12 @@ link-citations: yes
 description: "Documentation of master thesis of Raphael S. von Büren, Department of Environmental Sciences, University of Basel. Supervised by Dr. Erika Hiltbrunner and Prof. Dr. Ansgar Kahmen."
 ---
 
+```{r setup, include=FALSE, message=FALSE}
+setwd("/Users/buerap/Documents/RSvB/Ausbildung/d_Studium/_Uni Basel/_Masterarbeit Botanik/master_project/GitHub-documentation")
+library(tidyverse)
+tbl.test <- readr::read_csv(file = "_bookdown_files/GitHub-documentation_files/table-csv/test.csv", col_names = T)
+```
+
 # Prerequisites
 
 This is a **documentation book**, providing details on data structure and analyses of the the master thesis "Habitat-demands, micro-climate and freezing resistance of the tussock graminoids _Carex curvula_ and _Nardus stricta_".

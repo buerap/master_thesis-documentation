@@ -1,12 +1,12 @@
 # Data structure
 
-Here is a review of existing methods.
+Here is a review of existing methods (and I try a test here).
+The tables are available under `tbl(db, "helle")`
+Zunächst laden wir `` und 
 
 ## Observational study
 
 ```{r test-table, tidy=FALSE}
-library(tidyverse)
-tbl.test <- read_csv("_bookdown_files/GitHub-documentation_files/table-csv/test.csv", col_names = T)
 knitr::kable(
   head(tbl.test, 20), caption = 'Here is a TEST table!',
   booktabs = TRUE
