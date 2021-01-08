@@ -37,7 +37,8 @@ install.packages("bookdown")
 # devtools::install_github("rstudio/bookdown")
 ```
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+
+
 
 **The documentation was build with the following R version:**
 ```{r echo = FALSE, }

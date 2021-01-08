@@ -1,14 +1,12 @@
 # Data structure
 
-Here is a review of existing methods (and I try a test here).
-The tables are available under `tbl(db, "helle")`
-Zunächst laden wir `` und 
+Here, all raw data files are described. The tables are available under `https://github.com/buerap/master_thesis`.
 
 ## Observational study
-
-```{r test-table, tidy=FALSE}
+The described columns are available in the raw data file `raw_pos_characteristics.csv`, which contains information on the field sites.
+```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
-  head(tbl.test, 20), caption = 'Here is a TEST table!',
+  head(tbl.test, 20),
   booktabs = TRUE
 )
 ```
