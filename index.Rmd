@@ -21,7 +21,7 @@ knitr::write_bib(c(
 library(tidyverse)
 
 # Read data
-tbl.test <- readr::read_csv(file = "docs/GitHub-documentation_files/test.csv", col_names = T)
+raw_pos_char <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_pos_characteristics.csv", col_names = T)
 ```
 
 

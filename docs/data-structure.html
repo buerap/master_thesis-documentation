@@ -178,20 +178,180 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <colgroup>
 <col width="8%" />
 <col width="20%" />
-<col width="71%" />
+<col width="4%" />
+<col width="3%" />
+<col width="63%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">column</th>
-<th align="left">name</th>
-<th align="left">description</th>
+<th align="left">Column</th>
+<th align="left">Name</th>
+<th align="left">Datatype</th>
+<th align="left">Unit</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">ID_STAO</td>
-<td align="left">ID des Standortes</td>
-<td align="left">Diese Zahl ist ein Test und wird gebraucht als Verknüpfungsfeld</td>
+<td align="left">ID_position</td>
+<td align="left">identification number of the position</td>
+<td align="left">numeric</td>
+<td align="left">NA</td>
+<td align="left">All the different observational units (n = 115 + MEHR). Used as connection element.</td>
+</tr>
+<tr class="even">
+<td align="left">ID_site</td>
+<td align="left">identification numer of the site</td>
+<td align="left">numeric</td>
+<td align="left">NA</td>
+<td align="left">All the different sites (n = 15 + mehr). Each site contains several observational units (positions) along a snowmelt gradient.</td>
+</tr>
+<tr class="odd">
+<td align="left">GPS_x</td>
+<td align="left">GPS coordinates (longitude)</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">GPS_x_accur</td>
+<td align="left">Accuracy of GPS coordinates (longitude)</td>
+<td align="left">NA</td>
+<td align="left">meters</td>
+<td align="left">Mesured with iPhone…</td>
+</tr>
+<tr class="odd">
+<td align="left">GPS_y</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">GPS_y_accur</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">elevation</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">macroexposure_d</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">macroexposure</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">slope</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">exposure_d</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">exposure</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">topography</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">soil_depth1</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">soil_depth2</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">soil_depth3</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">ID_SP</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">species</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">corresp_control</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">control_spec_1</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">control_spec_2</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">control_spec_3</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">description</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
 </tr>
 </tbody>
 </table>

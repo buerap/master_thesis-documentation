@@ -6,7 +6,7 @@ Here, all raw data files are described. The tables are available under `https://
 The described columns are available in the raw data file `raw_pos_characteristics.csv`, which contains information on the field sites.
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
-  head(tbl.test, 20),
+  raw_pos_char,
   booktabs = TRUE
 )
 ```

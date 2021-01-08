@@ -1,0 +1,24 @@
+﻿Column,Name,Datatype,Unit,Description
+ID_position,identification number of the position,numeric,,All the different observational units (n = 115 + MEHR). Used as connection element.
+ID_site,identification numer of the site,numeric,,All the different sites (n = 15 + mehr). Each site contains several observational units (positions) along a snowmelt gradient.
+GPS_x,GPS coordinates (longitude),,,
+GPS_x_accur,Accuracy of GPS coordinates (longitude),,meters,Mesured with iPhone...
+GPS_y,,,,
+GPS_y_accur,,,,
+elevation,,,,
+macroexposure_d,,,,
+macroexposure,,,,
+slope,,,,
+exposure_d,,,,
+exposure,,,,
+topography,,,,
+soil_depth1,,,,
+soil_depth2,,,,
+soil_depth3,,,,
+ID_SP,,,,
+species,,,,
+corresp_control,,,,
+control_spec_1,,,,
+control_spec_2,,,,
+control_spec_3,,,,
+description,,,,
