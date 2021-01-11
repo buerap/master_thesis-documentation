@@ -34,7 +34,7 @@ raw_frost         <- readr::read_csv(file = "docs/GitHub-documentation_files/doc
 ```
 
 
-# Prerequisites
+# Prerequisites {}
 
 This is a documentation book, providing details on **data structure** and **analyses** of the the master thesis "Habitat-demands, micro-climate and freezing resistance of the tussock graminoids _Carex curvula_ and _Nardus stricta_".
 

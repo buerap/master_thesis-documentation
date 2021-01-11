@@ -1,9 +1,9 @@
-# Data structure
+# Data structure {}
 
 Here, all data files used for the analyses are described. The tables are available under `https://github.com/buerap/master_thesis`.
 
-## Observational units
-### Characteristics
+## Observational units {}
+### Characteristics {}
 The described columns are available in the raw data file `raw_pos_characteristics.csv`, which contains information on the observational units.
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
@@ -12,7 +12,7 @@ knitr::kable(
 )
 ```
 
-### Soil temperatures
+### Soil temperatures {}
 The described columns are available in the data file `R_pos_temperature.csv`, which contains thermal properties of the observational units.
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
@@ -21,7 +21,7 @@ knitr::kable(
 )
 ```
 
-### Soil moisture
+### Soil moisture {}
 The described columns are available in the data file `raw_moistmeasure_moisture.csv`, which contains soil moisture measurements at the observational units.
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
@@ -30,7 +30,7 @@ knitr::kable(
 )
 ```
 
-### Snowmelt patterns
+### Snowmelt patterns {}
 The described columns are available in the data file `raw_pos_snow.csv`, which contains information on snowmelt patterns at the observational units.
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
@@ -39,7 +39,7 @@ knitr::kable(
 )
 ```
 
-### Vegetation
+### Vegetation {}
 The described columns are available in the data file `raw_pos_vegetation.csv`, which contains data from vegetation surveys at the observational units.
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
@@ -56,7 +56,7 @@ knitr::kable(
 )
 ```
 
-### Vigour measurements
+### Vigour measurements {}
 The described columns are available in the data file `raw_vigmeasure_vigour.csv`, which contains information on vigour (growth, phenology) of the respective tussock at the observational units.
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
@@ -65,8 +65,8 @@ knitr::kable(
 )
 ```
 
-## Freezing experiments
-### Electrolyte leakage
+## Freezing experiments {}
+### Electrolyte leakage {}
 The described columns are available in the data file `raw_frostmeasure_freezingresistance.csv`, which contains information on freezing resistance of tissue samples from tussocks at the observational units as well as from an additional field site (transplant experiment).
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
