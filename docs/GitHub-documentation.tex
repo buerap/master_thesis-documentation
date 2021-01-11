@@ -1,39 +1,46 @@
-\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[]{book}
+\documentclass[
+]{book}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provides euro and other symbols
-\else % if luatex or xelatex
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
   \usepackage{unicode-math}
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
-% use upquote if available, for straight quotes in verbatim environments
+% Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\usepackage{hyperref}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-            pdftitle={Documentation master thesis},
-            pdfauthor={Raphael S. von Büren},
-            pdfborder={0 0 0},
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
+  pdftitle={Documentation master thesis},
+  pdfauthor={Raphael S. von Büren},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -75,8 +82,14 @@
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
-% Fix footnotes in tables (requires footnote package)
-\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -86,32 +99,21 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
-
-% set default figure placement to htbp
+% Set default figure placement to htbp
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
 \usepackage{booktabs}
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Documentation master thesis}
 \author{Raphael S. von Büren}
-\date{2020-11-10}
+\date{2021-01-11}
 
 \begin{document}
 \maketitle
@@ -123,7 +125,7 @@
 \hypertarget{prerequisites}{%
 \chapter{Prerequisites}\label{prerequisites}}
 
-This is a \textbf{documentation book}, providing details on data structure and analyses of the the master thesis ``Habitat-demands, micro-climate and freezing resistance of the tussock graminoids \emph{Carex curvula} and \emph{Nardus stricta}''.
+This is a documentation book, providing details on \textbf{data structure} and \textbf{analyses} of the the master thesis ``Habitat-demands, micro-climate and freezing resistance of the tussock graminoids \emph{Carex curvula} and \emph{Nardus stricta}''.
 
 The \textbf{bookdown} package, used to create this book, can be installed from CRAN or Github:
 
@@ -135,88 +137,264 @@ The \textbf{bookdown} package, used to create this book, can be installed from C
 \end{Highlighting}
 \end{Shaded}
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
+\textbf{The documentation was build with the following R version:}
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+\begin{verbatim}
+## R version 4.0.3 (2020-10-10)
+\end{verbatim}
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
+\hypertarget{background}{%
+\section{Background}\label{background}}
 
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
+\emph{Carex curvula} and \emph{Nardus stricta} are the most abundant tussock forming graminoid species in acidic, alpine grassland across the European Alps. It is unknown where and why one of the two species dominates in the alpine landscape or where they occur together. We explore the habitat requirements of both species and assess whether a distinct freezing resistance explains the distribution of these two species.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{questions}{%
+\section{Questions}\label{questions}}
 
-\begin{figure}
+• Which micro-habitat conditions select for either one of the two graminoids?
 
-{\centering \includegraphics[width=0.8\linewidth]{GitHub-documentation_files/figure-latex/nice-fig-1} 
+• Are the habitat requirements related to the freezing resistance in the two species?
 
-}
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
 
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
+We assessed the occurrence, abundance and vigour of both graminoid species in 113 sites, situated between 2195 - 2805 m asl (Swiss central Alps). Sites differ in elevation, topography (concave - convex), exposure, slope inclination, soil depth, soil moisture and vegetation composition. In addition to these site characteristics, we measured:
 
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
+• Soil temperature (iButton T-logger, 3 cm below ground, Sept 2019 - Sept 2020, hourly)
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+• Cover of \emph{Carex} and \emph{Nardus} (40 x 40 cm around data logger)
 
-\begin{table}
+• Freezing resistance in leaves (collected at 2370 m asl) using electrolyte leakage
+method after exposing leaves to freezing temperatures from -5 to -24 °C
 
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rrrrl}
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
-\midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
-\bottomrule
-\end{tabular}
-\end{table}
+\hypertarget{acknowledgements}{%
+\section{Acknowledgements}\label{acknowledgements}}
 
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+ALPFOR research station, with special thanks to Christian Körner, Corinne Bloch, Lukas Zimmermann, Patrick Möhl and Svenja Förster.
+
+\hypertarget{funding}{%
+\section{Funding}\label{funding}}
+
+• FAG BASEL: Fonds zur Förderung von Lehre und Forschung
+
+• MATHIEU-STIFTUNG Universität Basel
 
 \hypertarget{data-structure}{%
 \chapter{Data structure}\label{data-structure}}
 
-Here is a review of existing methods.
+Here, all data files used for the analyses are described. The tables are available under \texttt{https://github.com/buerap/master\_thesis}.
 
-\hypertarget{observational-study}{%
-\section{Observational study}\label{observational-study}}
+\hypertarget{observational-units}{%
+\section{Observational units}\label{observational-units}}
+
+\hypertarget{characteristics}{%
+\subsection{Characteristics}\label{characteristics}}
+
+The described columns are available in the raw data file \texttt{raw\_pos\_characteristics.csv}, which contains information on the observational units.
+
+\begin{tabular}{lllll}
+\toprule
+Column & Name & Datatype & Unit & Description\\
+\midrule
+ID\_position & Identification number of the position & numeric & - & All the different observational units (n = 115 + MEHR). Used as connection element.\\
+ID\_site & Identification numer of the site & numeric & - & All the different sites (n = 15 + mehr). Each site contains several observational units (positions) along a snowmelt gradient.\\
+GPS\_x & GPS coordinate (longitude) & numeric & meters & Longitudinal GPS coordinate (CH1903+ / LV95) of the position, measured with an iPhone 8 using (WRITE APP HERE).\\
+GPS\_x\_accur & Accuracy of GPS coordinate (longitude) & numeric & meters & Accuracy of longitudinal GPS coordinate.\\
+GPS\_y & GPS coordinate (latitude) & numeric & meters & Latitudinal GPS coordinate (CH1903+ / LV95) of the position, measured with an iPhone 8 using (WRITE APP HERE).\\
+\addlinespace
+GPS\_y\_accur & Accuracy of GPS coordinate (latitude) & numeric & meters & Accuracy of latitudinal GPS coordinate.\\
+elevation & Elevation & numeric & meters above sea level & Elevation of the position, measured with an iPhone 8 using (WRITE APP).\\
+macroexposure\_d & Macroexposure in degrees & numeric & degrees & Exposure of the whole site (in degrees), measured with a 50cm-board and an iPhone 8 using (WRITE COMPASS APP).\\
+macroexposure & Macroexposure as geographic direction & factor & - & Exposure of the whole site (geographic direction), measured with a 50cm-board and an iPhone 8 using (WRITE COMPASS APP).\\
+slope & Slope & numeric & degrees & Slope of the position, measured with a 50cm-board and an iPhone 8 using (WRITE APP).\\
+\addlinespace
+exposure\_d & Exposure in degrees & numeric & degrees & Exposure of the position (in degrees), measured with a 50cm-board and an iPhone 8 using (WRITE COMPASS APP).\\
+exposure & Exposure as geographic direction & factor & - & Exposure of the position (geographic direction), measured with a 50cm-board and an iPhone 8 using (WRITE COMPASS APP).\\
+topography & Topography & factor & - & Micro-topography around the position (40x40cm): convex, concave or flat. Estimated by eye.\\
+soil\_depth1 & Soil depth measurement 1 & numeric & centimeters & Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 1).\\
+soil\_depth2 & Soil depth measurement 2 & numeric & centimeters & Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 2).\\
+\addlinespace
+soil\_depth3 & Soil depth measurement 3 & numeric & centimeters & Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 3).\\
+ID\_SP & Identification numer of the species & numeric & - & Identification numer of the plant species (tussock grass) of the position under which the temperature logger was burried. Used as connection element.\\
+species & Species & factor & - & Plant species (tussock grass) of the position under which the temperature logger was burried. *Carex curvula (Cc)* or *Nardus stricta (Ns)* or *Helictotrichon versicolor (Hv)* or *Elyna myosuroides (Em)* or *Control (Con)*.\\
+corresp\_control & NA & NA & - & NA\\
+control\_spec\_1 & NA & NA & - & NA\\
+\addlinespace
+control\_spec\_2 & NA & NA & - & NA\\
+control\_spec\_3 & NA & NA & - & NA\\
+description & Description & character & - & Description of the observational unit and additional notes.\\
+\bottomrule
+\end{tabular}
+
+\hypertarget{soil-temperatures}{%
+\subsection{Soil temperatures}\label{soil-temperatures}}
+
+The described columns are available in the data file \texttt{R\_pos\_temperature.csv}, which contains thermal properties of the observational units.
+
+\begin{tabular}{lllll}
+\toprule
+Column & Name & Datatype & Unit & Description\\
+\midrule
+ID\_position & NA & NA & NA & NA\\
+snowmelt\_GMT & NA & NA & NA & NA\\
+wintersnow\_GMT & NA & NA & NA & NA\\
+Temp\_min & NA & NA & NA & NA\\
+Temp\_max & NA & NA & NA & NA\\
+\bottomrule
+\end{tabular}
+
+\hypertarget{soil-moisture}{%
+\subsection{Soil moisture}\label{soil-moisture}}
+
+The described columns are available in the data file \texttt{raw\_moistmeasure\_moisture.csv}, which contains soil moisture measurements at the observational units.
+
+\begin{tabular}{lllll}
+\toprule
+Column & Name & Datatype & Unit & Description\\
+\midrule
+ID\_moistmeasure & NA & NA & NA & NA\\
+ID\_position & NA & NA & NA & NA\\
+date\_timeMEZ & NA & NA & NA & NA\\
+moist1 & NA & NA & NA & NA\\
+moist2 & NA & NA & NA & NA\\
+\addlinespace
+soil & NA & NA & NA & NA\\
+\bottomrule
+\end{tabular}
+
+\hypertarget{snowmelt-patterns}{%
+\subsection{Snowmelt patterns}\label{snowmelt-patterns}}
+
+The described columns are available in the data file \texttt{raw\_pos\_snow.csv}, which contains information on snowmelt patterns at the observational units.
+
+\begin{tabular}{lllll}
+\toprule
+Column & Name & Datatype & Unit & Description\\
+\midrule
+ID\_position & NA & NA & NA & NA\\
+snowmelt\_GMT & NA & NA & NA & NA\\
+wintersnow\_GMT & NA & NA & NA & NA\\
+\bottomrule
+\end{tabular}
+
+\hypertarget{vegetation}{%
+\subsection{Vegetation}\label{vegetation}}
+
+The described columns are available in the data file \texttt{raw\_pos\_vegetation.csv}, which contains data from vegetation surveys at the observational units.
+
+\begin{tabular}{lllll}
+\toprule
+Column & Name & Datatype & Unit & Description\\
+\midrule
+ID\_position & NA & NA & NA & NA\\
+Carexcurvula & NA & NA & NA & NA\\
+Nardusstricta & NA & NA & NA & NA\\
+Achilleaerbarotta & NA & NA & NA & NA\\
+(...) & NA & NA & NA & NA\\
+\addlinespace
+Veronicabellidioides & NA & NA & NA & NA\\
+\bottomrule
+\end{tabular}
+
+Vegetation survey data can be joined with species information data. The described columns are available in the data file \texttt{raw\_species\_information.csv}, which contains information on the surveyed species.
+
+\begin{tabular}{lllll}
+\toprule
+Column & Name & Datatype & Unit & Description\\
+\midrule
+ID\_species & NA & NA & NA & NA\\
+aID\_SP & NA & NA & NA & NA\\
+genusspecies & NA & NA & NA & NA\\
+InfoFlora & NA & NA & NA & NA\\
+family & NA & NA & NA & NA\\
+\addlinespace
+genus & NA & NA & NA & NA\\
+species & NA & NA & NA & NA\\
+subspecies & NA & NA & NA & NA\\
+author\_citation & NA & NA & NA & NA\\
+speciesD & NA & NA & NA & NA\\
+\addlinespace
+complex & NA & NA & NA & NA\\
+LebensformD & NA & NA & NA & NA\\
+redlist & NA & NA & NA & NA\\
+LebensraumD & NA & NA & NA & NA\\
+plant\_community & NA & NA & NA & NA\\
+\addlinespace
+functional\_group\_1 & NA & NA & NA & NA\\
+functional\_group\_2 & NA & NA & NA & NA\\
+functional\_group\_3 & NA & NA & NA & NA\\
+\bottomrule
+\end{tabular}
+
+\hypertarget{vigour-measurements}{%
+\subsection{Vigour measurements}\label{vigour-measurements}}
+
+The described columns are available in the data file \texttt{raw\_vigmeasure\_vigour.csv}, which contains information on vigour (growth, phenology) of the respective tussock at the observational units.
+
+\begin{tabular}{lllll}
+\toprule
+Column & Name & Datatype & Unit & Description\\
+\midrule
+ID\_vigmeasure & NA & NA & NA & NA\\
+ID\_position & NA & NA & NA & NA\\
+date\_timeMEZ & NA & NA & NA & NA\\
+stalks\_n & NA & NA & NA & NA\\
+stamens & NA & NA & NA & NA\\
+\addlinespace
+styles & NA & NA & NA & NA\\
+stam\_styl & NA & NA & NA & NA\\
+preflower & NA & NA & NA & NA\\
+postflower & NA & NA & NA & NA\\
+stalks\_l1 & NA & NA & NA & NA\\
+\addlinespace
+stalks\_l2 & NA & NA & NA & NA\\
+stalks\_l3 & NA & NA & NA & NA\\
+stalks\_l4 & NA & NA & NA & NA\\
+stalks\_l5 & NA & NA & NA & NA\\
+leaf\_b1 & NA & NA & NA & NA\\
+\addlinespace
+leaf\_b2 & NA & NA & NA & NA\\
+leaf\_b3 & NA & NA & NA & NA\\
+leaf\_b4 & NA & NA & NA & NA\\
+leaf\_b5 & NA & NA & NA & NA\\
+leaf\_g1 & NA & NA & NA & NA\\
+\addlinespace
+leaf\_g2 & NA & NA & NA & NA\\
+leaf\_g3 & NA & NA & NA & NA\\
+leaf\_g4 & NA & NA & NA & NA\\
+leaf\_g5 & NA & NA & NA & NA\\
+notes & NA & NA & NA & NA\\
+\bottomrule
+\end{tabular}
+
+\hypertarget{freezing-experiments}{%
+\section{Freezing experiments}\label{freezing-experiments}}
+
+\hypertarget{electrolyte-leakage}{%
+\subsection{Electrolyte leakage}\label{electrolyte-leakage}}
+
+The described columns are available in the data file \texttt{raw\_frostmeasure\_freezingresistance.csv}, which contains information on freezing resistance of tissue samples from tussocks at the observational units as well as from an additional field site (transplant experiment).
+
+\begin{tabular}{lllll}
+\toprule
+Column & Name & Datatype & Unit & Description\\
+\midrule
+ID\_frostmeasure & NA & NA & NA & NA\\
+ID\_position & NA & NA & NA & NA\\
+type & NA & NA & NA & NA\\
+sample & NA & NA & NA & NA\\
+tissue & NA & NA & NA & NA\\
+\addlinespace
+age & NA & NA & NA & NA\\
+replic & NA & NA & NA & NA\\
+date & NA & NA & NA & NA\\
+LT50.bolt & NA & NA & NA & NA\\
+LT50.gomp & NA & NA & NA & NA\\
+\bottomrule
+\end{tabular}
 
 \hypertarget{statistical-analyses}{%
 \chapter{Statistical analyses}\label{statistical-analyses}}
@@ -239,6 +417,8 @@ Used packages and literature are demonstrated in this chapter.
 
 We have finished a nice book.
 
-\bibliography{book.bib,packages.bib}
+You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+
+  \bibliography{book.bib,packages.bib}
 
 \end{document}
