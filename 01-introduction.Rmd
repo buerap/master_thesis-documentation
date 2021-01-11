@@ -5,12 +5,16 @@
 
 ## Questions {}
 • Which micro-habitat conditions select for either one of the two graminoids?
+
 • Are the habitat requirements related to the freezing resistance in the two species?
 
 ## Methods {}
 We assessed the occurrence, abundance and vigour of both graminoid species in 113 sites, situated between 2195 - 2805 m asl (Swiss central Alps). Sites differ in elevation, topography (concave - convex), exposure, slope inclination, soil depth, soil moisture and vegetation composition. In addition to these site characteristics, we measured:
+
 • Soil temperature (iButton T-logger, 3 cm below ground, Sept 2019 - Sept 2020, hourly)
+
 • Cover of *Carex* and *Nardus* (40 x 40 cm around data logger)
+
 • Freezing resistance in leaves (collected at 2370 m asl) using electrolyte leakage
 method after exposing leaves to freezing temperatures from -5 to -24 °C
 
@@ -19,12 +23,10 @@ ALPFOR research station, with special thanks to Christian Körner, Corinne Bloch
 
 ## Funding {}
 • FAG BASEL: Fonds zur Förderung von Lehre und Forschung
+
 • MATHIEU-STIFTUNG Universität Basel
 
 
 
 
 
-
-
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
