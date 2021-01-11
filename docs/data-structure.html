@@ -24,7 +24,7 @@
 <meta name="author" content="Raphael S. von Büren" />
 
 
-<meta name="date" content="2021-01-08" />
+<meta name="date" content="2021-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,11 +176,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The described columns are available in the raw data file <code>raw_pos_characteristics.csv</code>, which contains information on the field sites.</p>
 <table>
 <colgroup>
-<col width="8%" />
-<col width="20%" />
-<col width="4%" />
+<col width="5%" />
+<col width="12%" />
 <col width="3%" />
-<col width="63%" />
+<col width="7%" />
+<col width="71%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -194,164 +194,164 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">ID_position</td>
-<td align="left">identification number of the position</td>
+<td align="left">Identification number of the position</td>
 <td align="left">numeric</td>
-<td align="left">NA</td>
+<td align="left">-</td>
 <td align="left">All the different observational units (n = 115 + MEHR). Used as connection element.</td>
 </tr>
 <tr class="even">
 <td align="left">ID_site</td>
-<td align="left">identification numer of the site</td>
+<td align="left">Identification numer of the site</td>
 <td align="left">numeric</td>
-<td align="left">NA</td>
+<td align="left">-</td>
 <td align="left">All the different sites (n = 15 + mehr). Each site contains several observational units (positions) along a snowmelt gradient.</td>
 </tr>
 <tr class="odd">
 <td align="left">GPS_x</td>
-<td align="left">GPS coordinates (longitude)</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">GPS coordinate (longitude)</td>
+<td align="left">numeric</td>
+<td align="left">meters</td>
+<td align="left">Longitudinal GPS coordinate (CH1903+ / LV95) of the position, measured with an iPhone 8 using (WRITE APP HERE).</td>
 </tr>
 <tr class="even">
 <td align="left">GPS_x_accur</td>
-<td align="left">Accuracy of GPS coordinates (longitude)</td>
-<td align="left">NA</td>
+<td align="left">Accuracy of GPS coordinate (longitude)</td>
+<td align="left">numeric</td>
 <td align="left">meters</td>
-<td align="left">Mesured with iPhone…</td>
+<td align="left">Accuracy of longitudinal GPS coordinate.</td>
 </tr>
 <tr class="odd">
 <td align="left">GPS_y</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">GPS coordinate (latitude)</td>
+<td align="left">numeric</td>
+<td align="left">meters</td>
+<td align="left">Latitudinal GPS coordinate (CH1903+ / LV95) of the position, measured with an iPhone 8 using (WRITE APP HERE).</td>
 </tr>
 <tr class="even">
 <td align="left">GPS_y_accur</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Accuracy of GPS coordinate (latitude)</td>
+<td align="left">numeric</td>
+<td align="left">meters</td>
+<td align="left">Accuracy of latitudinal GPS coordinate.</td>
 </tr>
 <tr class="odd">
 <td align="left">elevation</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Elevation</td>
+<td align="left">numeric</td>
+<td align="left">meters above sea level</td>
+<td align="left">Elevation of the position, measured with an iPhone 8 using (WRITE APP).</td>
 </tr>
 <tr class="even">
 <td align="left">macroexposure_d</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Macroexposure in degrees</td>
+<td align="left">numeric</td>
+<td align="left">degrees</td>
+<td align="left">Exposure of the whole site (in degrees), measured with a 50cm-board and an iPhone 8 using (WRITE COMPASS APP).</td>
 </tr>
 <tr class="odd">
 <td align="left">macroexposure</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Macroexposure as geographic direction</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Exposure of the whole site (geographic direction), measured with a 50cm-board and an iPhone 8 using (WRITE COMPASS APP).</td>
 </tr>
 <tr class="even">
 <td align="left">slope</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Slope</td>
+<td align="left">numeric</td>
+<td align="left">degrees</td>
+<td align="left">Slope of the position, measured with a 50cm-board and an iPhone 8 using (WRITE APP).</td>
 </tr>
 <tr class="odd">
 <td align="left">exposure_d</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Exposure in degrees</td>
+<td align="left">numeric</td>
+<td align="left">degrees</td>
+<td align="left">Exposure of the position (in degrees), measured with a 50cm-board and an iPhone 8 using (WRITE COMPASS APP).</td>
 </tr>
 <tr class="even">
 <td align="left">exposure</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Exposure as geographic direction</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Exposure of the position (geographic direction), measured with a 50cm-board and an iPhone 8 using (WRITE COMPASS APP).</td>
 </tr>
 <tr class="odd">
 <td align="left">topography</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Topography</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Micro-topography around the position (40x40cm): convex, concave or flat. Estimated by eye.</td>
 </tr>
 <tr class="even">
 <td align="left">soil_depth1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Soil depth measurement 1</td>
+<td align="left">numeric</td>
+<td align="left">centimeters</td>
+<td align="left">Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 1).</td>
 </tr>
 <tr class="odd">
 <td align="left">soil_depth2</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Soil depth measurement 2</td>
+<td align="left">numeric</td>
+<td align="left">centimeters</td>
+<td align="left">Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 2).</td>
 </tr>
 <tr class="even">
 <td align="left">soil_depth3</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Soil depth measurement 3</td>
+<td align="left">numeric</td>
+<td align="left">centimeters</td>
+<td align="left">Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 3).</td>
 </tr>
 <tr class="odd">
 <td align="left">ID_SP</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification numer of the species</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Identification numer of the plant species (tussock grass) of the position under which the temperature logger was burried. Used as connection element.</td>
 </tr>
 <tr class="even">
 <td align="left">species</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Species</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Plant species (tussock grass) of the position under which the temperature logger was burried. <em>Carex curvula (Cc)</em> or <em>Nardus stricta (Ns)</em> or <em>Helictotrichon versicolor (Hv)</em> or <em>Elyna myosuroides (Em)</em> or <em>Control (Con)</em>.</td>
 </tr>
 <tr class="odd">
 <td align="left">corresp_control</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">-</td>
 <td align="left">NA</td>
 </tr>
 <tr class="even">
 <td align="left">control_spec_1</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">-</td>
 <td align="left">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">control_spec_2</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">-</td>
 <td align="left">NA</td>
 </tr>
 <tr class="even">
 <td align="left">control_spec_3</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">-</td>
 <td align="left">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">description</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Description</td>
+<td align="left">character</td>
+<td align="left">-</td>
+<td align="left">Description of the observational unit and additional notes.</td>
 </tr>
 </tbody>
 </table>

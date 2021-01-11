@@ -1,0 +1,11 @@
+﻿Column,Name,Datatype,Unit,Description
+ID_frostmeasure,,,,
+ID_position,,,,
+type,,,,
+sample,,,,
+tissue,,,,
+age,,,,
+replic,,,,
+date,,,,
+LT50.bolt,,,,
+LT50.gomp,,,,

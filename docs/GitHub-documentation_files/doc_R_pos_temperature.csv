@@ -1,0 +1,6 @@
+﻿Column,Name,Datatype,Unit,Description
+ID_position,,,,
+snowmelt_GMT,,,,
+wintersnow_GMT,,,,
+Temp_min,,,,
+Temp_max,,,,
