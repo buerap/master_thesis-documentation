@@ -46,9 +46,6 @@ install.packages("bookdown")
 # devtools::install_github("rstudio/bookdown")
 ```
 
-
-
-
 **The documentation was build with the following R version:**
 ```{r echo = FALSE, }
 writeLines(R.version$version.string)
