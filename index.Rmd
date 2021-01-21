@@ -31,6 +31,7 @@ raw_pos_veg       <- readr::read_csv(file = "docs/GitHub-documentation_files/doc
 raw_species_info  <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_species_information.csv", col_names = T)
 raw_vig           <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_vigmeasure_vigour.csv", col_names = T)
 raw_frost         <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_frostmeasure_freezingresistance.csv", col_names = T)
+raw_soil          <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_pos_soil.csv", col_names = T)
 ```
 
 

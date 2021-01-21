@@ -30,6 +30,16 @@ knitr::kable(
 )
 ```
 
+### Soil properties {}
+The described columns are available in the data file `raw_pos_soil.csv`, which contains information on soil analyses from each observational unit.
+```{r tidy = FALSE, echo = FALSE}
+knitr::kable(
+  raw_soil,
+  booktabs = TRUE
+)
+```
+
+
 ### Snowmelt patterns {}
 The described columns are available in the data file `raw_pos_snow.csv`, which contains information on snowmelt patterns at the observational units.
 ```{r tidy = FALSE, echo = FALSE}
