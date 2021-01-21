@@ -20,7 +20,7 @@ knitr::write_bib(c(
 # Libraries
 library(tidyverse)
 
-# Read data --> HIER EVTL ECHTE DATEN HOCHLADEN (erst am Schluss wenn alle Analysen fertig)
+# Read data --> HIER EVTL ECHTE DATEN HOCHLADEN (erst am Schluss wenn alle Analysen fertig sind)
 
 # Read documentation data
 raw_pos_char      <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_pos_characteristics.csv", col_names = T)
