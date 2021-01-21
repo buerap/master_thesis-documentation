@@ -1,0 +1,7 @@
+﻿Column,Name,Datatype,Unit,Description
+ID_position,,,,
+sampl_date,,,,
+sampl_time,,,,
+pH,,,,
+C_N_ratio,,,,
+PO4,,,,

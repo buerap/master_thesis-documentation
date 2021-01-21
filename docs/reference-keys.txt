@@ -10,6 +10,7 @@ observational-units
 characteristics
 soil-temperatures
 soil-moisture
+soil-properties
 snowmelt-patterns
 vegetation
 vigour-measurements
