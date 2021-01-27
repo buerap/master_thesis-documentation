@@ -16,7 +16,7 @@ soil_depth1,Soil depth measurement 1,numeric,centimeters,"Soil depth around the 
 soil_depth2,Soil depth measurement 2,numeric,centimeters,"Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 2)."
 soil_depth3,Soil depth measurement 3,numeric,centimeters,"Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 3)."
 soil_depth_mean,Soil depth mean of measurements 1-3,numeric,centimeters,Mean value of the three soil depth measurements around the position (15x15cm).
-ID_SP,Identification numer of the species,numeric,-,Identification numer of the plant species (tussock grass) of the position under which the temperature logger was burried. Used as connection element.
+ID_species,Identification numer of the species,numeric,-,Identification numer of the plant species (tussock grass) of the position under which the temperature logger was burried. Used as connection element.
 species,Species,factor,-,Plant species (tussock grass) of the position under which the temperature logger was burried. *Carex curvula (Cc)* or *Nardus stricta (Ns)* or *Helictotrichon versicolor (Hv)* or *Elyna myosuroides (Em)* or *Control (Con)*.
 corresp_control,ID_position of corresponding control,numeric,-,"ID_position of a corresponding control logger (within one meter, without tussock). Note: Not every tussock has a control."
 control_spec_1,Controlled species 1,factor,-,"Species abbreviation of species 1, which is controlled by this control logger here."

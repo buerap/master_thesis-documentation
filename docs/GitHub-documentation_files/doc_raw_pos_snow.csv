@@ -1,4 +1,4 @@
 ﻿Column,Name,Datatype,Unit,Description
-ID_position,,,,
-snowmelt_GMT,,,,
-wintersnow_GMT,,,,
+ID_position,Identification number of the position,numeric,-,All the different observational units (n = 115 + MEHR). Used as connection element.
+snowmelt_GMT,Snow-disappearing time,POSIXct,General mean time (GMT),"Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation --> constant 0°C."
+wintersnow_GMT,Snow-in time,POSIXct,General mean time (GMT),Date and time when the position was snowed in in autumn 2019.  Date and time determined using soil temperature curves of the loggers: Snow insulation --> constant 0°C.

@@ -1,7 +1,6 @@
 ﻿Column,Name,Datatype,Unit,Description
-ID_position,,,,
-sampl_date,,,,
-sampl_time,,,,
-pH,,,,
-C_N_ratio,,,,
-PO4,,,,
+ID_position,Identification number of the position,numeric,-,All the different observational units where soil cores were taken (n = 115 + MEHR). Used as connection element.
+sampl_date,Sampling date and time,POSIXct,General mean time (GMT),Date and time of soil core collection.
+pH,pH-value,numeric,-,"pH-values from three soil cores (mixed), taken around the position (15x15cm) in 0-5cm dept, without litter. pH values determined in the lab."
+C_N_ratio,Carbon-to-nitrogen ratio,numeric,-,"Carbon-to-nitrogen ratio (C/N) from three soil cores (mixed), taken around the position (15x15cm) in 0-5cm dept, without litter. C/N values determined in the lab."
+PO4,,numeric,,

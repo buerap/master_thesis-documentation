@@ -1,7 +1,7 @@
 ﻿Column,Name,Datatype,Unit,Description
-ID_position,,,,
-Carexcurvula,,,,
-Nardusstricta,,,,
-Achilleaerbarotta,,,,
-(...),,,,
-Veronicabellidioides,,,,
+ID_position,Identification number of the position,numeric,-,All the different observational units where vegetation surveys (40x40cm around the logger) were conducted (n = 115). Used as connection element.
+Carexcurvula,Cover of *Carex curvula*,numeric,-,Cover estimation (percentage of total area) of *Carex curvula*.
+Nardusstricta,Cover of *Nardus stricta*,numeric,-,Cover estimation (percentage of total area) of *Nardus stricta*.
+Achilleaerbarotta,Cover of *Achillea erba-rotta*,numeric,-,Cover estimation (percentage of total area) of *Achillea erba-rotta*.
+(...),(...),numeric,-,"Cover estimation (percentage of total area) of n = 86 plants (all observed plants, one species per column, alphabetically)"
+Veronicabellidioides,Cover of *Veronica bellidioides*,numeric,-,Cover estimation (percentage of total area) of *Veronica bellidioides*.
