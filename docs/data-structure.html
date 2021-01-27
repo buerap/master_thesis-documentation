@@ -331,7 +331,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td align="left">Mean value of the three soil depth measurements around the position (15x15cm).</td>
 </tr>
 <tr class="even">
-<td align="left">ID_SP</td>
+<td align="left">ID_species</td>
 <td align="left">Identification numer of the species</td>
 <td align="left">numeric</td>
 <td align="left">-</td>
@@ -412,14 +412,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td align="left">snowmelt_GMT</td>
-<td align="left">Snow disappearing time</td>
+<td align="left">Snow-disappearing time</td>
 <td align="left">POSIXct</td>
 <td align="left">General mean time (GMT)</td>
 <td align="left">Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
 </tr>
 <tr class="odd">
 <td align="left">wintersnow_GMT</td>
-<td align="left">Snow in time</td>
+<td align="left">Snow-in time</td>
 <td align="left">POSIXct</td>
 <td align="left">General mean time (GMT)</td>
 <td align="left">Date and time when the position was snowed in in autumn 2019. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
@@ -518,6 +518,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.1.4</span> Soil properties</h3>
 <p>The described columns are available in the data file <code>raw_pos_soil.csv</code>, which contains information on soil analyses from each observational unit.</p>
 <table>
+<colgroup>
+<col width="4%" />
+<col width="15%" />
+<col width="3%" />
+<col width="9%" />
+<col width="66%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Column</th>
@@ -530,43 +537,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">ID_position</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the position</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">All the different observational units where soil cores were taken (n = 115 + MEHR). Used as connection element.</td>
 </tr>
 <tr class="even">
 <td align="left">sampl_date</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Sampling date and time</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time of soil core collection.</td>
 </tr>
 <tr class="odd">
-<td align="left">sampl_time</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
 <td align="left">pH</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">C_N_ratio</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">pH-value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">pH-values from three soil cores (mixed), taken around the position (15x15cm) in 0-5cm dept, without litter. pH values determined in the lab.</td>
 </tr>
 <tr class="even">
+<td align="left">C_N_ratio</td>
+<td align="left">Carbon-to-nitrogen ratio</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Carbon-to-nitrogen ratio (C/N) from three soil cores (mixed), taken around the position (15x15cm) in 0-5cm dept, without litter. C/N values determined in the lab.</td>
+</tr>
+<tr class="odd">
 <td align="left">PO4</td>
 <td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">numeric</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
@@ -577,6 +577,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.1.5</span> Snowmelt patterns</h3>
 <p>The described columns are available in the data file <code>raw_pos_snow.csv</code>, which contains information on snowmelt patterns at the observational units.</p>
 <table>
+<colgroup>
+<col width="4%" />
+<col width="11%" />
+<col width="2%" />
+<col width="7%" />
+<col width="74%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Column</th>
@@ -589,24 +596,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">ID_position</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the position</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">All the different observational units (n = 115 + MEHR). Used as connection element.</td>
 </tr>
 <tr class="even">
 <td align="left">snowmelt_GMT</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Snow-disappearing time</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
 </tr>
 <tr class="odd">
 <td align="left">wintersnow_GMT</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Snow-in time</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time when the position was snowed in in autumn 2019. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
 </tr>
 </tbody>
 </table>
@@ -615,6 +622,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.1.6</span> Vegetation</h3>
 <p>The described columns are available in the data file <code>raw_pos_vegetation.csv</code>, which contains data from vegetation surveys at the observational units.</p>
 <table>
+<colgroup>
+<col width="9%" />
+<col width="17%" />
+<col width="4%" />
+<col width="2%" />
+<col width="66%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Column</th>
@@ -627,50 +641,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">ID_position</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the position</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">All the different observational units where vegetation surveys (40x40cm around the logger) were conducted (n = 115). Used as connection element.</td>
 </tr>
 <tr class="even">
 <td align="left">Carexcurvula</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Cover of <em>Carex curvula</em></td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Cover estimation (percentage of total area) of <em>Carex curvula</em>.</td>
 </tr>
 <tr class="odd">
 <td align="left">Nardusstricta</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Cover of <em>Nardus stricta</em></td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Cover estimation (percentage of total area) of <em>Nardus stricta</em>.</td>
 </tr>
 <tr class="even">
 <td align="left">Achilleaerbarotta</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Cover of <em>Achillea erba-rotta</em></td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Cover estimation (percentage of total area) of <em>Achillea erba-rotta</em>.</td>
 </tr>
 <tr class="odd">
 <td align="left">(…)</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">(…)</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Cover estimation (percentage of total area) of n = 86 plants (all observed plants, one species per column, alphabetically)</td>
 </tr>
 <tr class="even">
 <td align="left">Veronicabellidioides</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Cover of <em>Veronica bellidioides</em></td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Cover estimation (percentage of total area) of <em>Veronica bellidioides</em>.</td>
 </tr>
 </tbody>
 </table>
 <p>Vegetation survey data can be joined with species information data. The described columns are available in the data file <code>raw_species_information.csv</code>, which contains information on the surveyed species.</p>
 <table>
+<colgroup>
+<col width="8%" />
+<col width="23%" />
+<col width="4%" />
+<col width="2%" />
+<col width="60%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Column</th>
@@ -683,129 +704,129 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">ID_species</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification numer of the species (alphabetically)</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Identification numer of the plant species (1-86). Used as connection element.</td>
 </tr>
 <tr class="even">
 <td align="left">aID_SP</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification numer of the species (BDM)</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Identification numer of the plant species used in the “Biodiversitätsmonitoring der Schweiz (BDM)”.</td>
 </tr>
 <tr class="odd">
 <td align="left">genusspecies</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Genus and species</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Genus and species written in one word. Used as connection element with vegetation table.</td>
 </tr>
 <tr class="even">
 <td align="left">InfoFlora</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Species number of InfoFlora</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Used to find the species in the database of InfoFlora.</td>
 </tr>
 <tr class="odd">
 <td align="left">family</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Family</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Family of the species, according to InfoFlora.</td>
 </tr>
 <tr class="even">
 <td align="left">genus</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Genus</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Genus of the species, according to InfoFlora.</td>
 </tr>
 <tr class="odd">
 <td align="left">species</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Species name</td>
+<td align="left">character</td>
+<td align="left">-</td>
+<td align="left">Species name of the species (e.g. <em>erba-rotta</em>), according to InfoFlora.</td>
 </tr>
 <tr class="even">
 <td align="left">subspecies</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Subspecies name</td>
+<td align="left">character</td>
+<td align="left">-</td>
+<td align="left">Subspecies of the species (e.g. <em>moschata</em>), according to InfoFlora.</td>
 </tr>
 <tr class="odd">
 <td align="left">author_citation</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Author citation</td>
+<td align="left">character</td>
+<td align="left">-</td>
+<td align="left">Author citation of the species (e.g. L.), according to InfoFlora.</td>
 </tr>
 <tr class="even">
 <td align="left">speciesD</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Name of the species in german</td>
+<td align="left">character</td>
+<td align="left">-</td>
+<td align="left">According to InfoFlora.</td>
 </tr>
 <tr class="odd">
 <td align="left">complex</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Complex</td>
+<td align="left">character</td>
+<td align="left">-</td>
+<td align="left">Complex (“Aggregat”) of the Species, according to InfoFlora.</td>
 </tr>
 <tr class="even">
 <td align="left">LebensformD</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Life form of the species in german</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">According to InfoFlora.</td>
 </tr>
 <tr class="odd">
 <td align="left">redlist</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Red list</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Red list status in Switzerland. According to InfoFlora.</td>
 </tr>
 <tr class="even">
 <td align="left">LebensraumD</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Habitat in german</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">According to InfoFlora.</td>
 </tr>
 <tr class="odd">
 <td align="left">plant_community</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Plant community</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">According to InfoFlora.</td>
 </tr>
 <tr class="even">
 <td align="left">functional_group_1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Functional group level1</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Functional group of plant species level 1 (<em>graminoids</em>, <em>forbs</em>, <em>dwarf shrubs</em>)</td>
 </tr>
 <tr class="odd">
 <td align="left">functional_group_2</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Functional group level2</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Functional group of plant species level 2 (<em>sedges</em>, <em>non-sedge graminoids</em>, <em>forbs</em>, <em>dwarf shrubs</em>)</td>
 </tr>
 <tr class="even">
 <td align="left">functional_group_3</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Functional group level3</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Functional group of plant species level 2 (<em>sedges</em>, <em>grasses</em>, <em>rushes</em>, <em>nitrogen-fixing forbs</em>, <em>non-fixing forbs</em>, <em>dwarf shrubs</em>)</td>
 </tr>
 </tbody>
 </table>
