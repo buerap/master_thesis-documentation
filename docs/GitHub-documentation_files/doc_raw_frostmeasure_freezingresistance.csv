@@ -1,11 +1,12 @@
 ﻿Column,Name,Datatype,Unit,Description
-ID_frostmeasure,,,,
-ID_position,,,,
-type,,,,
-sample,,,,
-tissue,,,,
-age,,,,
-replic,,,,
-date,,,,
-LT50.bolt,,,,
-LT50.gomp,,,,
+ID_frostmeasure,Identification number of the frost measurement,numeric,-,"All the different frost experiments (n = 150) of different positions, dates, species, tissues and ages."
+ID_position,Identification number of the position,numeric,-,All the different observational units (n = 115 + MEHR). Used as connection element.
+ID_site,Identification numer of the site,numeric,-,All the different sites where frost samples where collected (n = 17).
+type,Sample origin type,factor,-,"Three different sample origin types: *logger* (sampling close to an iButton), *monolith* (sampling from monolith experiment), *origin* (sampling at origin location of monoliths)."
+sample,Sampled species,factor,-,Abbreviation of species name.
+tissue,Sampled tissue,factor,-,Sampled tissue (*leaf* or *flower*).
+age,Age of sampled tissue,factor,-,"Age of sampled tissue (*old*, *young*, *mixed*)"
+replic,Replicate number,numeric,-,A minority of samples were collected multiple times at the same sampling time.
+date,Sampling date,POSIXct,General mean time (GMT),"In the data table, the sampling time is given by a date. In R, the date is implemented as data type POSIXct (GMT) with time GMT 11.00."
+LT50.bolt,Lethal temperature (LT50) Boltzmann,numeric,degree Celsius,"Temperature where 50% of the tissue is lethal, estimated by sigmoid Boltzmann function using leakage data."
+LT50.gomp,Lethal temperature (LT50) Gompertz,numeric,degree Celsius,"Temperature where 50% of the tissue is lethal, estimated by sigmoid Gompertz function using leakage data."

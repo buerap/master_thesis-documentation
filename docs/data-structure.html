@@ -24,7 +24,7 @@
 <meta name="author" content="Raphael S. von Büren" />
 
 
-<meta name="date" content="2021-01-21" />
+<meta name="date" content="2021-01-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -324,48 +324,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td align="left">Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 3).</td>
 </tr>
 <tr class="odd">
+<td align="left">soil_depth_mean</td>
+<td align="left">Soil depth mean of measurements 1-3</td>
+<td align="left">numeric</td>
+<td align="left">centimeters</td>
+<td align="left">Mean value of the three soil depth measurements around the position (15x15cm).</td>
+</tr>
+<tr class="even">
 <td align="left">ID_SP</td>
 <td align="left">Identification numer of the species</td>
 <td align="left">numeric</td>
 <td align="left">-</td>
 <td align="left">Identification numer of the plant species (tussock grass) of the position under which the temperature logger was burried. Used as connection element.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">species</td>
 <td align="left">Species</td>
 <td align="left">factor</td>
 <td align="left">-</td>
 <td align="left">Plant species (tussock grass) of the position under which the temperature logger was burried. <em>Carex curvula (Cc)</em> or <em>Nardus stricta (Ns)</em> or <em>Helictotrichon versicolor (Hv)</em> or <em>Elyna myosuroides (Em)</em> or <em>Control (Con)</em>.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">corresp_control</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">ID_position of corresponding control</td>
+<td align="left">numeric</td>
 <td align="left">-</td>
-<td align="left">NA</td>
+<td align="left">ID_position of a corresponding control logger (within one meter, without tussock). Note: Not every tussock has a control.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">control_spec_1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Controlled species 1</td>
+<td align="left">factor</td>
 <td align="left">-</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">control_spec_2</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">-</td>
-<td align="left">NA</td>
+<td align="left">Species abbreviation of species 1, which is controlled by this control logger here.</td>
 </tr>
 <tr class="even">
-<td align="left">control_spec_3</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">control_spec_2</td>
+<td align="left">Controlled species 2</td>
+<td align="left">factor</td>
 <td align="left">-</td>
-<td align="left">NA</td>
+<td align="left">Species abbreviation of species 2, which is controlled by this control logger here.</td>
 </tr>
 <tr class="odd">
+<td align="left">control_spec_3</td>
+<td align="left">Controlled species 3</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Species abbreviation of species 3, which is controlled by this control logger here.</td>
+</tr>
+<tr class="even">
 <td align="left">description</td>
 <td align="left">Description</td>
 <td align="left">character</td>
@@ -379,6 +386,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.1.2</span> Soil temperatures</h3>
 <p>The described columns are available in the data file <code>R_pos_temperature.csv</code>, which contains thermal properties of the observational units.</p>
 <table>
+<colgroup>
+<col width="4%" />
+<col width="11%" />
+<col width="2%" />
+<col width="7%" />
+<col width="74%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Column</th>
@@ -391,38 +405,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">ID_position</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the position</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">All the different observational units (n = 115 + MEHR). Used as connection element.</td>
 </tr>
 <tr class="even">
 <td align="left">snowmelt_GMT</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Snow disappearing time</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
 </tr>
 <tr class="odd">
 <td align="left">wintersnow_GMT</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Snow in time</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time when the position was snowed in in autumn 2019. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
 </tr>
 <tr class="even">
 <td align="left">Temp_min</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Annual minimum soil temperature</td>
+<td align="left">numeric</td>
+<td align="left">degree Celsius</td>
+<td align="left">Soil minimum temperature along the whole year (09.2019-09.2020) at the respective position, measured 2-3cm below ground using temperature loggers (iButtons).</td>
 </tr>
 <tr class="odd">
 <td align="left">Temp_max</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Annual maximum soil temperature</td>
+<td align="left">numeric</td>
+<td align="left">degree Celsius</td>
+<td align="left">Soil maximum temperature along the whole year (09.2019-09.2020) at the respective position, measured 2-3cm below ground using temperature loggers (iButtons).</td>
 </tr>
 </tbody>
 </table>
@@ -431,6 +445,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.1.3</span> Soil moisture</h3>
 <p>The described columns are available in the data file <code>raw_moistmeasure_moisture.csv</code>, which contains soil moisture measurements at the observational units.</p>
 <table>
+<colgroup>
+<col width="6%" />
+<col width="21%" />
+<col width="3%" />
+<col width="10%" />
+<col width="56%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Column</th>
@@ -443,45 +464,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">ID_moistmeasure</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the moisture measurement</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">All the different soil moisture measurements (n = 657), taken multiple times per position during the season.</td>
 </tr>
 <tr class="even">
 <td align="left">ID_position</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the position</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Observational units where the soil moisture was measured. Used as connection element.</td>
 </tr>
 <tr class="odd">
 <td align="left">date_timeMEZ</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Measurement date and time</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time of the soil moisture measurement.</td>
 </tr>
 <tr class="even">
 <td align="left">moist1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Soil moisture measurement 1</td>
+<td align="left">numeric</td>
+<td align="left">Volume percent (Vol%)</td>
+<td align="left">Soil moisture measurement 1, approximately 5 cm next to temperature logger (ID_position). Mesurement device: ThetaProbe type ML3.</td>
 </tr>
 <tr class="odd">
 <td align="left">moist2</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Soil moisture measurement 2</td>
+<td align="left">numeric</td>
+<td align="left">Volume percent (Vol%)</td>
+<td align="left">Soil moisture measurement 2, approximately 5 cm next to temperature logger (ID_position). Mesurement device: ThetaProbe type ML3.</td>
 </tr>
 <tr class="even">
+<td align="left">moist_mean</td>
+<td align="left">Mean of soil moisture measurements 1 and 2</td>
+<td align="left">numeric</td>
+<td align="left">Volume percent (Vol%)</td>
+<td align="left">Mean value of the two soil moisture measurements.</td>
+</tr>
+<tr class="odd">
 <td align="left">soil</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Soil type</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Soil type (<em>mineralic</em> or <em>organic</em>) used as input variable in the measurement device (ThetaProbe).</td>
 </tr>
 </tbody>
 </table>
@@ -981,6 +1009,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.2.1</span> Electrolyte leakage</h3>
 <p>The described columns are available in the data file <code>raw_frostmeasure_freezingresistance.csv</code>, which contains information on freezing resistance of tissue samples from tussocks at the observational units as well as from an additional field site (transplant experiment).</p>
 <table>
+<colgroup>
+<col width="5%" />
+<col width="17%" />
+<col width="3%" />
+<col width="8%" />
+<col width="65%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Column</th>
@@ -993,73 +1028,80 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">ID_frostmeasure</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the frost measurement</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">All the different frost experiments (n = 150) of different positions, dates, species, tissues and ages.</td>
 </tr>
 <tr class="even">
 <td align="left">ID_position</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the position</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">All the different observational units (n = 115 + MEHR). Used as connection element.</td>
 </tr>
 <tr class="odd">
+<td align="left">ID_site</td>
+<td align="left">Identification numer of the site</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">All the different sites where frost samples where collected (n = 17).</td>
+</tr>
+<tr class="even">
 <td align="left">type</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Sample origin type</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Three different sample origin types: <em>logger</em> (sampling close to an iButton), <em>monolith</em> (sampling from monolith experiment), <em>origin</em> (sampling at origin location of monoliths).</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">sample</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Sampled species</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Abbreviation of species name.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">tissue</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Sampled tissue</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Sampled tissue (<em>leaf</em> or <em>flower</em>).</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">age</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Age of sampled tissue</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Age of sampled tissue (<em>old</em>, <em>young</em>, <em>mixed</em>)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">replic</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">date</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Replicate number</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">A minority of samples were collected multiple times at the same sampling time.</td>
 </tr>
 <tr class="odd">
-<td align="left">LT50.bolt</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">date</td>
+<td align="left">Sampling date</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">In the data table, the sampling time is given by a date. In R, the date is implemented as data type POSIXct (GMT) with time GMT 11.00.</td>
 </tr>
 <tr class="even">
+<td align="left">LT50.bolt</td>
+<td align="left">Lethal temperature (LT50) Boltzmann</td>
+<td align="left">numeric</td>
+<td align="left">degree Celsius</td>
+<td align="left">Temperature where 50% of the tissue is lethal, estimated by sigmoid Boltzmann function using leakage data.</td>
+</tr>
+<tr class="odd">
 <td align="left">LT50.gomp</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Lethal temperature (LT50) Gompertz</td>
+<td align="left">numeric</td>
+<td align="left">degree Celsius</td>
+<td align="left">Temperature where 50% of the tissue is lethal, estimated by sigmoid Gompertz function using leakage data.</td>
 </tr>
 </tbody>
 </table>

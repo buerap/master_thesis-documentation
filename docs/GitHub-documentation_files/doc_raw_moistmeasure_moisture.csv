@@ -1,7 +1,8 @@
 ﻿Column,Name,Datatype,Unit,Description
-ID_moistmeasure,,,,
-ID_position,,,,
-date_timeMEZ,,,,
-moist1,,,,
-moist2,,,,
-soil,,,,
+ID_moistmeasure,Identification number of the moisture measurement,numeric,-,"All the different soil moisture measurements (n = 657), taken multiple times per position during the season."
+ID_position,Identification number of the position,numeric,-,Observational units where the soil moisture was measured. Used as connection element.
+date_timeMEZ,Measurement date and time,POSIXct,General mean time (GMT),Date and time of the soil moisture measurement.
+moist1,Soil moisture measurement 1,numeric,Volume percent (Vol%),"Soil moisture measurement 1, approximately 5 cm next to temperature logger (ID_position). Mesurement device: ThetaProbe type ML3."
+moist2,Soil moisture measurement 2,numeric,Volume percent (Vol%),"Soil moisture measurement 2, approximately 5 cm next to temperature logger (ID_position). Mesurement device: ThetaProbe type ML3."
+moist_mean,Mean of soil moisture measurements 1 and 2,numeric,Volume percent (Vol%),Mean value of the two soil moisture measurements.
+soil,Soil type,factor,-,Soil type (*mineralic* or *organic*) used as input variable in the measurement device (ThetaProbe).
