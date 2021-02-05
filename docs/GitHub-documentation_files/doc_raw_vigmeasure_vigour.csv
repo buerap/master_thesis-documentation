@@ -1,26 +1,29 @@
 ﻿Column,Name,Datatype,Unit,Description
-ID_vigmeasure,,,,
-ID_position,,,,
-date_timeMEZ,,,,
-stalks_n,,,,
-stamens,,,,
-styles,,,,
-stam_styl,,,,
-preflower,,,,
-postflower,,,,
-stalks_l1,,,,
-stalks_l2,,,,
-stalks_l3,,,,
-stalks_l4,,,,
-stalks_l5,,,,
-leaf_b1,,,,
-leaf_b2,,,,
-leaf_b3,,,,
-leaf_b4,,,,
-leaf_b5,,,,
-leaf_g1,,,,
-leaf_g2,,,,
-leaf_g3,,,,
-leaf_g4,,,,
-leaf_g5,,,,
-notes,,,,
+ID_vigmeasure,Identification number of the vigour measurement,numeric,-,"All the different vigour measurements (n = 761), taken multiple times per position during the season."
+ID_position,Identification number of the position,numeric,-,Observational units where the vigour was measured. Used as connection element.
+date_timeGMT,Measurement date and time,POSIXct,General mean time (GMT),Date and time of the vigour measurement.
+stalks_n,Total number of stalks,numeric,-,Total number of stalks within 15x15 cm of the tussock.
+stamens,Number of stalks with flowering stamens only,numeric,-,Number of stalks with flowering stamens (male) only within 15x15 cm of the tussock.
+styles,Number of stalks with flowering styles only,numeric,-,Number of stalks with flowering styles (female) only within 15x15 cm of the tussock.
+stam_styl,Number of stalks with both flowering stamens and styles,numeric,-,Number of stalks with both flowering stamens and styles within 15x15 cm of the tussock.
+preflower,Number of stalks not flowered yet,numeric,-,Number of stalks not flowered yet within 15x15 cm of the tussock.
+postflower,Number of stalks with withered flowers,numeric,-,Number of stalks with withered flowers within 15x15 cm of the tussock.
+stalks_l1,Length of stalks measurement 1,numeric,centimeter,Length of stalks (including flowering organs) measurement 1
+stalks_l2,Length of stalks measurement 2,numeric,centimeter,Length of stalks (including flowering organs) measurement 2
+stalks_l3,Length of stalks measurement 3,numeric,centimeter,Length of stalks (including flowering organs) measurement 3
+stalks_l4,Length of stalks measurement 4,numeric,centimeter,Length of stalks (including flowering organs) measurement 4
+stalks_l5,Length of stalks measurement 5,numeric,centimeter,Length of stalks (including flowering organs) measurement 5
+stalks_l_mean,Length of stalks mean,numeric,centimeter,Length of stalks (including flowering organs) mean value of measurements 1-5
+leaf_b1,Brown leaf tips length measurement 1,numeric,centimeter,Length of brown leaf tips measurement 1
+leaf_b2,Brown leaf tips length measurement 2,numeric,centimeter,Length of brown leaf tips measurement 2
+leaf_b3,Brown leaf tips length measurement 3,numeric,centimeter,Length of brown leaf tips measurement 3
+leaf_b4,Brown leaf tips length measurement 4,numeric,centimeter,Length of brown leaf tips measurement 4
+leaf_b5,Brown leaf tips length measurement 5,numeric,centimeter,Length of brown leaf tips measurement 5
+leaf_b_mean,Brown leaf tips length mean,numeric,centimeter,Length of brown leaf tips mean value of measurements 1-5
+leaf_g1,Green leaf length measurement 1,numeric,centimeter,Length of green leaf part measurement 1
+leaf_g2,Green leaf length measurement 2,numeric,centimeter,Length of green leaf part measurement 2
+leaf_g3,Green leaf length measurement 3,numeric,centimeter,Length of green leaf part measurement 3
+leaf_g4,Green leaf length measurement 4,numeric,centimeter,Length of green leaf part measurement 4
+leaf_g5,Green leaf length measurement 5,numeric,centimeter,Length of green leaf part measurement 5
+leaf_g_mean,Green leaf length mean,numeric,centimeter,Length of green leaf part mean value of measurements 1-5.
+notes,Notes,character,-,Notes on the measurement and additional information.

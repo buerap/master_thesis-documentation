@@ -24,7 +24,7 @@
 <meta name="author" content="Raphael S. von Büren" />
 
 
-<meta name="date" content="2021-01-27" />
+<meta name="date" content="2021-02-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,8 +51,6 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -147,12 +145,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="data-structure.html"><a href="data-structure.html"><i class="fa fa-check"></i><b>3</b> Data structure</a><ul>
 <li class="chapter" data-level="3.1" data-path="data-structure.html"><a href="data-structure.html#observational-units"><i class="fa fa-check"></i><b>3.1</b> Observational units</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="data-structure.html"><a href="data-structure.html#characteristics"><i class="fa fa-check"></i><b>3.1.1</b> Characteristics</a></li>
-<li class="chapter" data-level="3.1.2" data-path="data-structure.html"><a href="data-structure.html#soil-temperatures"><i class="fa fa-check"></i><b>3.1.2</b> Soil temperatures</a></li>
+<li class="chapter" data-level="3.1.2" data-path="data-structure.html"><a href="data-structure.html#soil-temperatures-and-snowmelt-patterns"><i class="fa fa-check"></i><b>3.1.2</b> Soil temperatures and snowmelt patterns</a></li>
 <li class="chapter" data-level="3.1.3" data-path="data-structure.html"><a href="data-structure.html#soil-moisture"><i class="fa fa-check"></i><b>3.1.3</b> Soil moisture</a></li>
 <li class="chapter" data-level="3.1.4" data-path="data-structure.html"><a href="data-structure.html#soil-properties"><i class="fa fa-check"></i><b>3.1.4</b> Soil properties</a></li>
-<li class="chapter" data-level="3.1.5" data-path="data-structure.html"><a href="data-structure.html#snowmelt-patterns"><i class="fa fa-check"></i><b>3.1.5</b> Snowmelt patterns</a></li>
-<li class="chapter" data-level="3.1.6" data-path="data-structure.html"><a href="data-structure.html#vegetation"><i class="fa fa-check"></i><b>3.1.6</b> Vegetation</a></li>
-<li class="chapter" data-level="3.1.7" data-path="data-structure.html"><a href="data-structure.html#vigour-measurements"><i class="fa fa-check"></i><b>3.1.7</b> Vigour measurements</a></li>
+<li class="chapter" data-level="3.1.5" data-path="data-structure.html"><a href="data-structure.html#vegetation"><i class="fa fa-check"></i><b>3.1.5</b> Vegetation</a></li>
+<li class="chapter" data-level="3.1.6" data-path="data-structure.html"><a href="data-structure.html#vigour-measurements"><i class="fa fa-check"></i><b>3.1.6</b> Vigour measurements</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="data-structure.html"><a href="data-structure.html#freezing-experiments"><i class="fa fa-check"></i><b>3.2</b> Freezing experiments</a><ul>
 <li class="chapter" data-level="3.2.1" data-path="data-structure.html"><a href="data-structure.html#electrolyte-leakage"><i class="fa fa-check"></i><b>3.2.1</b> Electrolyte leakage</a></li>
@@ -195,11 +192,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The described columns are available in the raw data file <code>raw_pos_characteristics.csv</code>, which contains information on the observational units.</p>
 <table>
 <colgroup>
-<col width="5%" />
+<col width="6%" />
 <col width="12%" />
 <col width="3%" />
 <col width="7%" />
-<col width="71%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -373,7 +370,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td align="left">Species abbreviation of species 3, which is controlled by this control logger here.</td>
 </tr>
 <tr class="even">
-<td align="left">description</td>
+<td align="left">position_description</td>
 <td align="left">Description</td>
 <td align="left">character</td>
 <td align="left">-</td>
@@ -382,16 +379,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div id="soil-temperatures" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> Soil temperatures</h3>
-<p>The described columns are available in the data file <code>R_pos_temperature.csv</code>, which contains thermal properties of the observational units.</p>
+<div id="soil-temperatures-and-snowmelt-patterns" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Soil temperatures and snowmelt patterns</h3>
+<p>The described columns are available in the data file <code>R_pos_temperature.csv</code>, which contains thermal properties as well as information on snowmelt patterns at the observational units.</p>
 <table>
 <colgroup>
-<col width="4%" />
-<col width="11%" />
+<col width="5%" />
+<col width="13%" />
 <col width="2%" />
 <col width="7%" />
-<col width="74%" />
+<col width="71%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -408,35 +405,154 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td align="left">Identification number of the position</td>
 <td align="left">numeric</td>
 <td align="left">-</td>
-<td align="left">All the different observational units (n = 115 + MEHR). Used as connection element.</td>
-</tr>
-<tr class="even">
-<td align="left">snowmelt_GMT</td>
-<td align="left">Snow-disappearing time</td>
-<td align="left">POSIXct</td>
-<td align="left">General mean time (GMT)</td>
-<td align="left">Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
-</tr>
-<tr class="odd">
-<td align="left">wintersnow_GMT</td>
-<td align="left">Snow-in time</td>
-<td align="left">POSIXct</td>
-<td align="left">General mean time (GMT)</td>
-<td align="left">Date and time when the position was snowed in in autumn 2019. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
+<td align="left">All the different observational units (n = 115 + MEHR). Used as connection element. Temperatures were measured 2-3cm below ground using temperature loggers (iButtons).</td>
 </tr>
 <tr class="even">
 <td align="left">Temp_min</td>
 <td align="left">Annual minimum soil temperature</td>
 <td align="left">numeric</td>
 <td align="left">degree Celsius</td>
-<td align="left">Soil minimum temperature along the whole year (09.2019-09.2020) at the respective position, measured 2-3cm below ground using temperature loggers (iButtons).</td>
+<td align="left">Soil minimum temperature along the whole year (09.2019-09.2020).</td>
 </tr>
 <tr class="odd">
 <td align="left">Temp_max</td>
 <td align="left">Annual maximum soil temperature</td>
 <td align="left">numeric</td>
 <td align="left">degree Celsius</td>
-<td align="left">Soil maximum temperature along the whole year (09.2019-09.2020) at the respective position, measured 2-3cm below ground using temperature loggers (iButtons).</td>
+<td align="left">Soil maximum temperature along the whole year (09.2019-09.2020).</td>
+</tr>
+<tr class="even">
+<td align="left">Temp_ampl</td>
+<td align="left">Annual soil temperature amplitude</td>
+<td align="left">numeric</td>
+<td align="left">Kelvin</td>
+<td align="left">Difference between annual soil minimum and maximum temperature (09.2019-09.2020).</td>
+</tr>
+<tr class="odd">
+<td align="left">Temp_ampl_max</td>
+<td align="left">Maximum of daily soil temperature amplitudes</td>
+<td align="left">numeric</td>
+<td align="left">Kelvin</td>
+<td align="left">Maximum of all daily soil temperature amplitudes, which are differences between daily soil minimum and maximum temperatures (09.2019-09.2020).</td>
+</tr>
+<tr class="even">
+<td align="left">Temp_min_JS</td>
+<td align="left">Minimum soil temperature (June to Sept)</td>
+<td align="left">numeric</td>
+<td align="left">degree Celsius</td>
+<td align="left">Soil minimum temperature in the time-span of 01.06.2020 until 01.09.2020.</td>
+</tr>
+<tr class="odd">
+<td align="left">Temp_min_snowfree</td>
+<td align="left">Minimum soil temperature (snowfree time)</td>
+<td align="left">numeric</td>
+<td align="left">degree Celsius</td>
+<td align="left">Soil minimum temperature in the time-span of one day after snow disappearance until 01.09.2020. Therefore, the position was already exposed to (potential) sun when experiencing this minimum temperature.</td>
+</tr>
+<tr class="even">
+<td align="left">GDH.0_SS</td>
+<td align="left">Growing degree hours (&gt; 0°C; Sept to Sept)</td>
+<td align="left">numeric</td>
+<td align="left">degree hours</td>
+<td align="left">Growing heat summation of growing degree hours GDH (&gt; 0°C) from 01.09.2019 to 01.09.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.</td>
+</tr>
+<tr class="odd">
+<td align="left">GDH.0_JA</td>
+<td align="left">Growing degree hours (&gt; 0°C; July to Aug)</td>
+<td align="left">numeric</td>
+<td align="left">degree hours</td>
+<td align="left">Growing heat summation of growing degree hours GDH (&gt; 0°C) from 15.07.2020 to 15.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.</td>
+</tr>
+<tr class="even">
+<td align="left">GDH.5_SS</td>
+<td align="left">Growing degree hours (&gt; 5°C; Sept to Sept)</td>
+<td align="left">numeric</td>
+<td align="left">degree hours</td>
+<td align="left">Growing heat summation of growing degree hours GDH (&gt; 5°C) from 01.09.2019 to 01.09.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.</td>
+</tr>
+<tr class="odd">
+<td align="left">GDH.5_JA</td>
+<td align="left">Growing degree hours (&gt; 5°C; July to Aug)</td>
+<td align="left">numeric</td>
+<td align="left">degree hours</td>
+<td align="left">Growing heat summation of growing degree hours GDH (&gt; 5°C) from 15.07.2020 to 15.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.</td>
+</tr>
+<tr class="even">
+<td align="left">FDH.0_OA</td>
+<td align="left">Freezing degree hours (&lt; 0°C; Oct to Aug)</td>
+<td align="left">numeric</td>
+<td align="left">degree hours</td>
+<td align="left">Freezing summation of freezing degree hours FDH (&lt; 0°C) from 01.10.2019 to 01.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.</td>
+</tr>
+<tr class="odd">
+<td align="left">wintersnow19_GMT</td>
+<td align="left">Snow-in time 2019</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time when the position was snowed-in in autumn 2019. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
+</tr>
+<tr class="even">
+<td align="left">wintersnow19_day</td>
+<td align="left">Snow-in day 2019</td>
+<td align="left">numeric</td>
+<td align="left">days</td>
+<td align="left">Snow-in day 2019 –&gt; Use ID_day format here (ID_day: 1 == Date: 01.09.2019).</td>
+</tr>
+<tr class="odd">
+<td align="left">snowmelt20_GMT</td>
+<td align="left">Snow disappearance time 2019/20</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
+</tr>
+<tr class="even">
+<td align="left">snowmelt20_day</td>
+<td align="left">Snow-disappearance day 2019/20</td>
+<td align="left">numeric</td>
+<td align="left">days</td>
+<td align="left">Snow disappearance day (2019/20) –&gt; Use ID_day format here (ID_day: 1 == Date: 01.09.2019).</td>
+</tr>
+<tr class="odd">
+<td align="left">wintersnow20_GMT</td>
+<td align="left">Snow-in time 2020</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time when the position was snowed-in in autumn 2020. Date and time determined by physical presence at the Furkapass (heavy snow fall).</td>
+</tr>
+<tr class="even">
+<td align="left">wintersnow20_day</td>
+<td align="left">Snow-in day 2020</td>
+<td align="left">numeric</td>
+<td align="left">days</td>
+<td align="left">Snow-in day 2020 –&gt; Use ID_day format here (ID_day: 1 == Date: 2019-09-01).</td>
+</tr>
+<tr class="odd">
+<td align="left">days_snow19_20</td>
+<td align="left">Days with snowcover</td>
+<td align="left">numeric</td>
+<td align="left">days</td>
+<td align="left">Amount of days with continuous snow-cover.</td>
+</tr>
+<tr class="even">
+<td align="left">days_snowfree20</td>
+<td align="left">Days without snowcover</td>
+<td align="left">numeric</td>
+<td align="left">days</td>
+<td align="left">Amount of days without continuous snow-cover.</td>
+</tr>
+<tr class="odd">
+<td align="left">days_frozen</td>
+<td align="left">Days with frozen soil</td>
+<td align="left">numeric</td>
+<td align="left">days</td>
+<td align="left">Amount of days with frozen soil (daily mean soil temperature ≤ -0.3°C).</td>
+</tr>
+<tr class="even">
+<td align="left">days_vegper20</td>
+<td align="left">Days with growing conditions</td>
+<td align="left">numeric</td>
+<td align="left">days</td>
+<td align="left">Amount of days with growing conditions (daily mean soil temperature ≥ 5°C) –&gt; vegetation period.</td>
 </tr>
 </tbody>
 </table>
@@ -573,53 +689,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div id="snowmelt-patterns" class="section level3">
-<h3><span class="header-section-number">3.1.5</span> Snowmelt patterns</h3>
-<p>The described columns are available in the data file <code>raw_pos_snow.csv</code>, which contains information on snowmelt patterns at the observational units.</p>
-<table>
-<colgroup>
-<col width="4%" />
-<col width="11%" />
-<col width="2%" />
-<col width="7%" />
-<col width="74%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Column</th>
-<th align="left">Name</th>
-<th align="left">Datatype</th>
-<th align="left">Unit</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">ID_position</td>
-<td align="left">Identification number of the position</td>
-<td align="left">numeric</td>
-<td align="left">-</td>
-<td align="left">All the different observational units (n = 115 + MEHR). Used as connection element.</td>
-</tr>
-<tr class="even">
-<td align="left">snowmelt_GMT</td>
-<td align="left">Snow-disappearing time</td>
-<td align="left">POSIXct</td>
-<td align="left">General mean time (GMT)</td>
-<td align="left">Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
-</tr>
-<tr class="odd">
-<td align="left">wintersnow_GMT</td>
-<td align="left">Snow-in time</td>
-<td align="left">POSIXct</td>
-<td align="left">General mean time (GMT)</td>
-<td align="left">Date and time when the position was snowed in in autumn 2019. Date and time determined using soil temperature curves of the loggers: Snow insulation –&gt; constant 0°C.</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div id="vegetation" class="section level3">
-<h3><span class="header-section-number">3.1.6</span> Vegetation</h3>
+<h3><span class="header-section-number">3.1.5</span> Vegetation</h3>
 <p>The described columns are available in the data file <code>raw_pos_vegetation.csv</code>, which contains data from vegetation surveys at the observational units.</p>
 <table>
 <colgroup>
@@ -832,9 +903,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 </div>
 <div id="vigour-measurements" class="section level3">
-<h3><span class="header-section-number">3.1.7</span> Vigour measurements</h3>
+<h3><span class="header-section-number">3.1.6</span> Vigour measurements</h3>
 <p>The described columns are available in the data file <code>raw_vigmeasure_vigour.csv</code>, which contains information on vigour (growth, phenology) of the respective tussock at the observational units.</p>
 <table>
+<colgroup>
+<col width="6%" />
+<col width="27%" />
+<col width="4%" />
+<col width="11%" />
+<col width="49%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Column</th>
@@ -847,178 +925,199 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">ID_vigmeasure</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the vigour measurement</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">All the different vigour measurements (n = 761), taken multiple times per position during the season.</td>
 </tr>
 <tr class="even">
 <td align="left">ID_position</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Identification number of the position</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Observational units where the vigour was measured. Used as connection element.</td>
 </tr>
 <tr class="odd">
-<td align="left">date_timeMEZ</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">date_timeGMT</td>
+<td align="left">Measurement date and time</td>
+<td align="left">POSIXct</td>
+<td align="left">General mean time (GMT)</td>
+<td align="left">Date and time of the vigour measurement.</td>
 </tr>
 <tr class="even">
 <td align="left">stalks_n</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Total number of stalks</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Total number of stalks within 15x15 cm of the tussock.</td>
 </tr>
 <tr class="odd">
 <td align="left">stamens</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Number of stalks with flowering stamens only</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Number of stalks with flowering stamens (male) only within 15x15 cm of the tussock.</td>
 </tr>
 <tr class="even">
 <td align="left">styles</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Number of stalks with flowering styles only</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Number of stalks with flowering styles (female) only within 15x15 cm of the tussock.</td>
 </tr>
 <tr class="odd">
 <td align="left">stam_styl</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Number of stalks with both flowering stamens and styles</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Number of stalks with both flowering stamens and styles within 15x15 cm of the tussock.</td>
 </tr>
 <tr class="even">
 <td align="left">preflower</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Number of stalks not flowered yet</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Number of stalks not flowered yet within 15x15 cm of the tussock.</td>
 </tr>
 <tr class="odd">
 <td align="left">postflower</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Number of stalks with withered flowers</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Number of stalks with withered flowers within 15x15 cm of the tussock.</td>
 </tr>
 <tr class="even">
 <td align="left">stalks_l1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Length of stalks measurement 1</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of stalks (including flowering organs) measurement 1</td>
 </tr>
 <tr class="odd">
 <td align="left">stalks_l2</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Length of stalks measurement 2</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of stalks (including flowering organs) measurement 2</td>
 </tr>
 <tr class="even">
 <td align="left">stalks_l3</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Length of stalks measurement 3</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of stalks (including flowering organs) measurement 3</td>
 </tr>
 <tr class="odd">
 <td align="left">stalks_l4</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Length of stalks measurement 4</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of stalks (including flowering organs) measurement 4</td>
 </tr>
 <tr class="even">
 <td align="left">stalks_l5</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Length of stalks measurement 5</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of stalks (including flowering organs) measurement 5</td>
 </tr>
 <tr class="odd">
+<td align="left">stalks_l_mean</td>
+<td align="left">Length of stalks mean</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of stalks (including flowering organs) mean value of measurements 1-5</td>
+</tr>
+<tr class="even">
 <td align="left">leaf_b1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Brown leaf tips length measurement 1</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of brown leaf tips measurement 1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">leaf_b2</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">leaf_b3</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Brown leaf tips length measurement 2</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of brown leaf tips measurement 2</td>
 </tr>
 <tr class="even">
-<td align="left">leaf_b4</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">leaf_b3</td>
+<td align="left">Brown leaf tips length measurement 3</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of brown leaf tips measurement 3</td>
 </tr>
 <tr class="odd">
+<td align="left">leaf_b4</td>
+<td align="left">Brown leaf tips length measurement 4</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of brown leaf tips measurement 4</td>
+</tr>
+<tr class="even">
 <td align="left">leaf_b5</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Brown leaf tips length measurement 5</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of brown leaf tips measurement 5</td>
+</tr>
+<tr class="odd">
+<td align="left">leaf_b_mean</td>
+<td align="left">Brown leaf tips length mean</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of brown leaf tips mean value of measurements 1-5</td>
 </tr>
 <tr class="even">
 <td align="left">leaf_g1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Green leaf length measurement 1</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of green leaf part measurement 1</td>
 </tr>
 <tr class="odd">
 <td align="left">leaf_g2</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Green leaf length measurement 2</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of green leaf part measurement 2</td>
 </tr>
 <tr class="even">
 <td align="left">leaf_g3</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Green leaf length measurement 3</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of green leaf part measurement 3</td>
 </tr>
 <tr class="odd">
 <td align="left">leaf_g4</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Green leaf length measurement 4</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of green leaf part measurement 4</td>
 </tr>
 <tr class="even">
 <td align="left">leaf_g5</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Green leaf length measurement 5</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of green leaf part measurement 5</td>
 </tr>
 <tr class="odd">
+<td align="left">leaf_g_mean</td>
+<td align="left">Green leaf length mean</td>
+<td align="left">numeric</td>
+<td align="left">centimeter</td>
+<td align="left">Length of green leaf part mean value of measurements 1-5.</td>
+</tr>
+<tr class="even">
 <td align="left">notes</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">Notes</td>
+<td align="left">character</td>
+<td align="left">-</td>
+<td align="left">Notes on the measurement and additional information.</td>
 </tr>
 </tbody>
 </table>

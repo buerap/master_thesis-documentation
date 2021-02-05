@@ -8,10 +8,9 @@ funding
 data-structure
 observational-units
 characteristics
-soil-temperatures
+soil-temperatures-and-snowmelt-patterns
 soil-moisture
 soil-properties
-snowmelt-patterns
 vegetation
 vigour-measurements
 freezing-experiments

@@ -22,4 +22,4 @@ corresp_control,ID_position of corresponding control,numeric,-,"ID_position of a
 control_spec_1,Controlled species 1,factor,-,"Species abbreviation of species 1, which is controlled by this control logger here."
 control_spec_2,Controlled species 2,factor,-,"Species abbreviation of species 2, which is controlled by this control logger here."
 control_spec_3,Controlled species 3,factor,-,"Species abbreviation of species 3, which is controlled by this control logger here."
-description,Description,character,-,Description of the observational unit and additional notes.
+position_description,Description,character,-,Description of the observational unit and additional notes.

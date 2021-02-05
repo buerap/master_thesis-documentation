@@ -12,8 +12,8 @@ knitr::kable(
 )
 ```
 
-### Soil temperatures {}
-The described columns are available in the data file `R_pos_temperature.csv`, which contains thermal properties of the observational units.
+### Soil temperatures and snowmelt patterns {}
+The described columns are available in the data file `R_pos_temperature.csv`, which contains thermal properties as well as information on snowmelt patterns at the observational units.
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
   R_pos_temp,
@@ -35,16 +35,6 @@ The described columns are available in the data file `raw_pos_soil.csv`, which c
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
   raw_soil,
-  booktabs = TRUE
-)
-```
-
-
-### Snowmelt patterns {}
-The described columns are available in the data file `raw_pos_snow.csv`, which contains information on snowmelt patterns at the observational units.
-```{r tidy = FALSE, echo = FALSE}
-knitr::kable(
-  raw_pos_snow,
   booktabs = TRUE
 )
 ```

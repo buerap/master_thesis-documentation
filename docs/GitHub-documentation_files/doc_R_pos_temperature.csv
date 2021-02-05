@@ -1,6 +1,23 @@
 ﻿Column,Name,Datatype,Unit,Description
-ID_position,Identification number of the position,numeric,-,All the different observational units (n = 115 + MEHR). Used as connection element.
-snowmelt_GMT,Snow-disappearing time,POSIXct,General mean time (GMT),"Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation --> constant 0°C."
-wintersnow_GMT,Snow-in time,POSIXct,General mean time (GMT),Date and time when the position was snowed in in autumn 2019.  Date and time determined using soil temperature curves of the loggers: Snow insulation --> constant 0°C.
-Temp_min,Annual minimum soil temperature,numeric,degree Celsius,"Soil minimum temperature along the whole year (09.2019-09.2020) at the respective position, measured 2-3cm below ground using temperature loggers (iButtons)."
-Temp_max,Annual maximum soil temperature,numeric,degree Celsius,"Soil maximum temperature along the whole year (09.2019-09.2020) at the respective position, measured 2-3cm below ground using temperature loggers (iButtons)."
+ID_position,Identification number of the position,numeric,-,All the different observational units (n = 115 + MEHR). Used as connection element. Temperatures were measured 2-3cm below ground using temperature loggers (iButtons).
+Temp_min,Annual minimum soil temperature,numeric,degree Celsius,Soil minimum temperature along the whole year (09.2019-09.2020).
+Temp_max,Annual maximum soil temperature,numeric,degree Celsius,Soil maximum temperature along the whole year (09.2019-09.2020).
+Temp_ampl,Annual soil temperature amplitude,numeric,Kelvin,Difference between annual soil minimum and maximum temperature (09.2019-09.2020).
+Temp_ampl_max,Maximum of daily soil temperature amplitudes,numeric,Kelvin,"Maximum of all daily soil temperature amplitudes, which are differences between daily soil minimum and maximum temperatures (09.2019-09.2020)."
+Temp_min_JS,Minimum soil temperature (June to Sept),numeric,degree Celsius,Soil minimum temperature in the time-span of 01.06.2020 until 01.09.2020.
+Temp_min_snowfree,Minimum soil temperature (snowfree time),numeric,degree Celsius,"Soil minimum temperature in the time-span of one day after snow disappearance until 01.09.2020. Therefore, the position was already exposed to (potential) sun when experiencing this minimum temperature."
+GDH.0_SS,Growing degree hours (> 0°C; Sept to Sept),numeric,degree hours,Growing heat summation of growing degree hours GDH (> 0°C) from 01.09.2019 to 01.09.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+GDH.0_JA,Growing degree hours (> 0°C; July to Aug),numeric,degree hours,Growing heat summation of growing degree hours GDH (> 0°C) from 15.07.2020 to 15.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+GDH.5_SS,Growing degree hours (> 5°C; Sept to Sept),numeric,degree hours,Growing heat summation of growing degree hours GDH (> 5°C) from 01.09.2019 to 01.09.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+GDH.5_JA,Growing degree hours (> 5°C; July to Aug),numeric,degree hours,Growing heat summation of growing degree hours GDH (> 5°C) from 15.07.2020 to 15.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+FDH.0_OA,Freezing degree hours (< 0°C; Oct to Aug),numeric,degree hours,Freezing summation of freezing degree hours FDH (< 0°C) from 01.10.2019 to 01.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+wintersnow19_GMT,Snow-in time 2019,POSIXct,General mean time (GMT),Date and time when the position was snowed-in in autumn 2019.  Date and time determined using soil temperature curves of the loggers: Snow insulation --> constant 0°C.
+wintersnow19_day,Snow-in day 2019,numeric,days,Snow-in day 2019 --> Use ID_day format here (ID_day: 1 == Date: 01.09.2019).
+snowmelt20_GMT,Snow disappearance time 2019/20,POSIXct,General mean time (GMT),"Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation --> constant 0°C."
+snowmelt20_day,Snow-disappearance day 2019/20,numeric,days,Snow disappearance day (2019/20) --> Use ID_day format here (ID_day: 1 == Date: 01.09.2019).
+wintersnow20_GMT,Snow-in time 2020,POSIXct,General mean time (GMT),Date and time when the position was snowed-in in autumn 2020.  Date and time determined by physical presence at the Furkapass (heavy snow fall).
+wintersnow20_day,Snow-in day 2020,numeric,days,Snow-in day 2020 --> Use ID_day format here (ID_day: 1 == Date: 2019-09-01).
+days_snow19_20,Days with snowcover,numeric,days,Amount of days with continuous snow-cover.
+days_snowfree20,Days without snowcover,numeric,days,Amount of days without continuous snow-cover.
+days_frozen,Days with frozen soil,numeric,days,Amount of days with frozen soil (daily mean soil temperature ≤ -0.3°C).
+days_vegper20,Days with growing conditions,numeric,days,Amount of days with growing conditions (daily mean soil temperature ≥ 5°C) --> vegetation period.
