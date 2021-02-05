@@ -1,6 +1,6 @@
 ﻿Column,Name,Datatype,Unit,Description
 ID_position,Identification number of the position,numeric,-,"All the different observational units of the observational study (n = 115), the micro-climatology study for *Carex curvula* (n = 14) and the transplantation study (n = 2). Used as connection element."
-ID_site,Identification numer of the site,numeric,-,"All the different sites of the observational (n = 15 ), where each site contains several observational units (positions) along a snowmelt gradient. Further, all the sites of the micro-climatology study for *Carex curvula* ( n = 1) and the transplantation study (n = 2)."
+ID_site,Identification numer of the site,numeric,-,"All the different sites of the observational study (n = 15 ), where each site contains several observational units (positions) along a snowmelt gradient. Further, all the sites of the micro-climatology study for *Carex curvula* ( n = 1) and the transplantation study (n = 2)."
 GPS_x,GPS coordinate (longitude),numeric,meters,"Longitudinal GPS coordinate (CH1903+ / LV95) of the position, measured with an iPhone 8 using Altimeter+ (iOS App)."
 GPS_x_accur,Accuracy of GPS coordinate (longitude),numeric,meters,Accuracy of longitudinal GPS coordinate.
 GPS_y,GPS coordinate (latitude),numeric,meters,"Latitudinal GPS coordinate (CH1903+ / LV95) of the position, measured with an iPhone 8 using Altimeter+ (iOS App)."
