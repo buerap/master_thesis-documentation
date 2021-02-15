@@ -1,0 +1,41 @@
+﻿Column,Name,Datatype,Unit,Description
+ID_species,Identification numer of the species (alphabetically),numeric,-,Identification numer of the plant species (1-86). Used as connection element.
+aID_SP,Identification numer of the species (BDM),numeric,-,"Identification numer of the plant species used in the ""Biodiversitätsmonitoring der Schweiz (BDM)""."
+genusspecies,Genus and species ,factor,-,Genus and species written in one word. Used as connection element with vegetation table.
+InfoFlora,Species number of InfoFlora,numeric,-,Used to find the species in the database of InfoFlora.
+family,Family,factor,-,"Family of the species, according to InfoFlora."
+genus,Genus,factor,-,"Genus of the species, according to InfoFlora."
+species,Species name,character,-,"Species name of the species (e.g. *erba-rotta*), according to InfoFlora."
+subspecies,Subspecies name,character,-,"Subspecies of the species (e.g. *moschata*), according to InfoFlora."
+author_citation,Author citation,character,-,"Author citation of the species (e.g. L.), according to InfoFlora."
+speciesD,Name of the species in german,character,-,According to InfoFlora.
+complex,Complex,character,-,"Complex (""Aggregat"") of the Species, according to InfoFlora."
+LebensformD,Life form of the species in german,factor,-,According to InfoFlora.
+redlist,Red list,factor,-,Red list status in Switzerland. According to InfoFlora.
+LebensraumD,Habitat in german,factor,-,According to InfoFlora.
+plant_community,Plant community,factor,-,According to InfoFlora.
+functional_group_1,Functional group level1,factor,-,"Functional group of plant species level 1 (*graminoids*, *forbs*, *dwarf shrubs*)"
+functional_group_2,Functional group level2,factor,-,"Functional group of plant species level 2 (*sedges*, *non-sedge graminoids*, *forbs*, *dwarf shrubs*)"
+functional_group_3,Functional group level3,factor,-,"Functional group of plant species level 2 (*sedges*, *grasses*, *rushes*, *nitrogen-fixing forbs*, *non-fixing forbs*, *dwarf shrubs*)"
+T,Temperature indicator value,numeric,-,Flora Indicativa: Temperaturzahl zwischen 1-5 mit halbzahligen Werten. 1 = alpin und nival; 5 = sehr warm und kollin.
+N,Nitrogen indicator value,numeric,-,Flora Indicativa: Stickstoffzahl zwischen 1-5 nur ganzzahlige Werte. 1 = nährstoffarm; 5 = nährstoffreich.
+L,Light indicator value,numeric,-,"Flora Indicativa: Lichtzahl zwischen 1-5 nur ganzzahlige Werte. 1=sehr schattig (tolerieren sogar weniger als 3% Licht); 5 = sonnig (wachsen nur an offenen, sonnigen Orten)."
+F,Moisture indicator value,numeric,-,Flora Indicativa: Feuchtezahl zwischen 1-5 nur ganzzahlige Werte. 1 = sehr trocken; 5 = überflutet (z.B. Wasserpflanzen).
+H,Organic material indicator value,numeric,-,Flora Indicativa: Humuszeiger. 1 = humusarm; 3 = mittlerer Humusgehalt; 5 = humusreich.
+EG,Ecological group,numeric,-,Flora Indicativa: Ökologische Gruppe. 1 = Waldpflanzen; 2 = Bergpflanzen; 3 = Pionierpflanzen tiefer Lagen; 4 = Wassepflanzen; 5 = Feuchtgebietspflanzen; 6 = Trockenwiesenpflanzen; 7 = Ruderalpflanzen; 8 = Fettwiesenpflanzen.
+W,Variation of soil moisture indicator value,numeric,-,"Flora Indicativa: Variation der Boden-Feuchtigkeit. 1 = wenig Variation, 2 = mittlere Variation, 3 = starke Variation."
+R,Reaction indicator value,numeric,-,"Flora Indicativa: Reaktionswert, zeigt den Anteil freier H-Ionen an. 1 = sehr sauer (tiefer pH) bis 5 = basisch (hoher pH)."
+MV,Mowing tolerance indicator value,numeric,-,Flora Indicativa: Mähtoleranz. 1 = schlecht bis 5 = sehr gut.
+AE,Native or neophyte,factor,-,Flora Indicativa: Zeitpunkt und Art der Einwanderung. Gibt an ob eine Art indigen oder neophytisch ist.
+KL,Short-lived species,numeric,-,"Flora Indicativa: Kurzlebige Arten (=1). Arten die als Lebensfarm (LF) einer der folgenden Kategorien zugehören: k, k-t, t."
+Best_Bu,Pollination by butterflies,logical,-,Flora Indicativa: Durch Tagfalter bestäubte Arten. Arten die als Bestäubungsstrategie (BS) einer der folgenden Kategorien zugehören: le oder ps.
+Black_List,Black list,factor,-,"BL = Schwarze Liste der invasiven Neophyten und WL = Watch List der invasiven Neophyten. Gemäss: Info Flora 2014; Liste der gebietsfremden invasiven Pflanzen der Schweiz; S.Buholzer, M.Nobis, N. Schoenenberger, S. Rometsch. Siehe auch Info Flora Homepage."
+FrSV,Invasive neophytes,numeric,-,"Invasiven Neophyten gemäss Freisetzungsverordnung. Referenz: Info Flora 2014; Liste der gebietsfremden invasiven Pflanzen der Schweiz; S.Buholzer, M.Nobis, N. Schoenenberger, S. Rometsch. Siehe auch Info Flora Homepage."
+WV,Pasture capability,numeric,-,BioFlor: Weideverträglichkeitszahl. 1 = völlig weide-unverträglich; 3 = weideempfindlich; 5 = mässig weidevertäglich; 7 = gut weideverträglich; 9 = überaus weideverträglich
+TV,Footstep capability,numeric,-,"BioFlor: Trittverträglichkeitszahl. 1 = völlig trittunverträglich; hochwüchsige, krautige Schaft-, Horst- und Klimmpflanzen; 3 = trittempfindlich: hochwüchsige grasartige und mittelwüchsige krautige Horstpflanzen; 5 = mäßig trittverträglich: mittelhohe Gräser, niedrigwüchsige Kräuter, Halbrosetten-Pflanzen, höherwüchsige Einjährige, sowie verdichtete Böden ertragende Arten; 7 = trittverträglich: Untergräser und niedrigwüchsige Kräuter mit Kriechsprossen; 9 = überaus trittverträglich, bzw. erst durch häufigen Tritt und/oder Schnitt konkurrenzfähig; niedrigwüchsige Einjährige und Rosettenpflanzen, z.B. Parkrasenpflanzen"
+FW,Nutritional value,numeric,-,BioFlor: Futterwertzahlen. 1 = giftig für Nutztier (und Mensch; 2 = kein Futterwert; 2 = sehr geringer Futterwert; 3 = geringer Futterwert; 4 = zwischen 3 und 5 stehend; 5 = mittlerer Futterwert; 7 = hoher Futterwert; 9 = bester Futterwert
+Vork,Habitat,factor,-,BioFlor: Vorkommen (Vork). A = Äcker und Gärten; GE = Extensivgrünland; GW = Wirtschaftsgrünland; N = Nichtkulturland und Brachen; W = Waldrand und Säume
+sla,Specific leaf area index,numeric,mm^2/mg,"Leda: Ist das Verhältnis von frischer Blattfläche und Trockengewicht des Blattes: SLA = Blattfläche / Trockengewicht des Blattes, in mm2/mg."
+ch,Height,numeric,m,Leda: Wuchshöhe in m.
+sm,Seed weight,numeric,mg,Leda: Samengewicht in mg.
+lf,Growing form,factor,-,Leda: Die Wuchsform ist eine Kombination der Lebensfrom-klassifizierung von Raunkiaer ergänzt mit anderen Spezialformen basierend auf ihrer Morphologie (z.B. Epiphyten) oder ihrer Lebensraums (z.B. Habitat).

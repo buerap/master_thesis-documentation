@@ -24,7 +24,7 @@
 <meta name="author" content="Raphael S. von Büren" />
 
 
-<meta name="date" content="2021-02-05" />
+<meta name="date" content="2021-02-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -754,14 +754,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>Vegetation survey data can be joined with species information data. The described columns are available in the data file <code>raw_species_information.csv</code>, which contains information on the surveyed species.</p>
+<p>Vegetation survey data can be joined with species information data. The described columns are available in the data file <code>R_species_information.csv</code>, which contains information on the surveyed species.</p>
 <table>
 <colgroup>
-<col width="8%" />
-<col width="23%" />
-<col width="4%" />
 <col width="2%" />
-<col width="60%" />
+<col width="7%" />
+<col width="1%" />
+<col width="1%" />
+<col width="87%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -898,6 +898,160 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td align="left">factor</td>
 <td align="left">-</td>
 <td align="left">Functional group of plant species level 2 (<em>sedges</em>, <em>grasses</em>, <em>rushes</em>, <em>nitrogen-fixing forbs</em>, <em>non-fixing forbs</em>, <em>dwarf shrubs</em>)</td>
+</tr>
+<tr class="odd">
+<td align="left">T</td>
+<td align="left">Temperature indicator value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Temperaturzahl zwischen 1-5 mit halbzahligen Werten. 1 = alpin und nival; 5 = sehr warm und kollin.</td>
+</tr>
+<tr class="even">
+<td align="left">N</td>
+<td align="left">Nitrogen indicator value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Stickstoffzahl zwischen 1-5 nur ganzzahlige Werte. 1 = nährstoffarm; 5 = nährstoffreich.</td>
+</tr>
+<tr class="odd">
+<td align="left">L</td>
+<td align="left">Light indicator value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Lichtzahl zwischen 1-5 nur ganzzahlige Werte. 1=sehr schattig (tolerieren sogar weniger als 3% Licht); 5 = sonnig (wachsen nur an offenen, sonnigen Orten).</td>
+</tr>
+<tr class="even">
+<td align="left">F</td>
+<td align="left">Moisture indicator value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Feuchtezahl zwischen 1-5 nur ganzzahlige Werte. 1 = sehr trocken; 5 = überflutet (z.B. Wasserpflanzen).</td>
+</tr>
+<tr class="odd">
+<td align="left">H</td>
+<td align="left">Organic material indicator value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Humuszeiger. 1 = humusarm; 3 = mittlerer Humusgehalt; 5 = humusreich.</td>
+</tr>
+<tr class="even">
+<td align="left">EG</td>
+<td align="left">Ecological group</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Ökologische Gruppe. 1 = Waldpflanzen; 2 = Bergpflanzen; 3 = Pionierpflanzen tiefer Lagen; 4 = Wassepflanzen; 5 = Feuchtgebietspflanzen; 6 = Trockenwiesenpflanzen; 7 = Ruderalpflanzen; 8 = Fettwiesenpflanzen.</td>
+</tr>
+<tr class="odd">
+<td align="left">W</td>
+<td align="left">Variation of soil moisture indicator value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Variation der Boden-Feuchtigkeit. 1 = wenig Variation, 2 = mittlere Variation, 3 = starke Variation.</td>
+</tr>
+<tr class="even">
+<td align="left">R</td>
+<td align="left">Reaction indicator value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Reaktionswert, zeigt den Anteil freier H-Ionen an. 1 = sehr sauer (tiefer pH) bis 5 = basisch (hoher pH).</td>
+</tr>
+<tr class="odd">
+<td align="left">MV</td>
+<td align="left">Mowing tolerance indicator value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Mähtoleranz. 1 = schlecht bis 5 = sehr gut.</td>
+</tr>
+<tr class="even">
+<td align="left">AE</td>
+<td align="left">Native or neophyte</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Zeitpunkt und Art der Einwanderung. Gibt an ob eine Art indigen oder neophytisch ist.</td>
+</tr>
+<tr class="odd">
+<td align="left">KL</td>
+<td align="left">Short-lived species</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Kurzlebige Arten (=1). Arten die als Lebensfarm (LF) einer der folgenden Kategorien zugehören: k, k-t, t.</td>
+</tr>
+<tr class="even">
+<td align="left">Best_Bu</td>
+<td align="left">Pollination by butterflies</td>
+<td align="left">logical</td>
+<td align="left">-</td>
+<td align="left">Flora Indicativa: Durch Tagfalter bestäubte Arten. Arten die als Bestäubungsstrategie (BS) einer der folgenden Kategorien zugehören: le oder ps.</td>
+</tr>
+<tr class="odd">
+<td align="left">Black_List</td>
+<td align="left">Black list</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">BL = Schwarze Liste der invasiven Neophyten und WL = Watch List der invasiven Neophyten. Gemäss: Info Flora 2014; Liste der gebietsfremden invasiven Pflanzen der Schweiz; S.Buholzer, M.Nobis, N. Schoenenberger, S. Rometsch. Siehe auch Info Flora Homepage.</td>
+</tr>
+<tr class="even">
+<td align="left">FrSV</td>
+<td align="left">Invasive neophytes</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">Invasiven Neophyten gemäss Freisetzungsverordnung. Referenz: Info Flora 2014; Liste der gebietsfremden invasiven Pflanzen der Schweiz; S.Buholzer, M.Nobis, N. Schoenenberger, S. Rometsch. Siehe auch Info Flora Homepage.</td>
+</tr>
+<tr class="odd">
+<td align="left">WV</td>
+<td align="left">Pasture capability</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">BioFlor: Weideverträglichkeitszahl. 1 = völlig weide-unverträglich; 3 = weideempfindlich; 5 = mässig weidevertäglich; 7 = gut weideverträglich; 9 = überaus weideverträglich</td>
+</tr>
+<tr class="even">
+<td align="left">TV</td>
+<td align="left">Footstep capability</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">BioFlor: Trittverträglichkeitszahl. 1 = völlig trittunverträglich; hochwüchsige, krautige Schaft-, Horst- und Klimmpflanzen; 3 = trittempfindlich: hochwüchsige grasartige und mittelwüchsige krautige Horstpflanzen; 5 = mäßig trittverträglich: mittelhohe Gräser, niedrigwüchsige Kräuter, Halbrosetten-Pflanzen, höherwüchsige Einjährige, sowie verdichtete Böden ertragende Arten; 7 = trittverträglich: Untergräser und niedrigwüchsige Kräuter mit Kriechsprossen; 9 = überaus trittverträglich, bzw. erst durch häufigen Tritt und/oder Schnitt konkurrenzfähig; niedrigwüchsige Einjährige und Rosettenpflanzen, z.B. Parkrasenpflanzen</td>
+</tr>
+<tr class="odd">
+<td align="left">FW</td>
+<td align="left">Nutritional value</td>
+<td align="left">numeric</td>
+<td align="left">-</td>
+<td align="left">BioFlor: Futterwertzahlen. 1 = giftig für Nutztier (und Mensch; 2 = kein Futterwert; 2 = sehr geringer Futterwert; 3 = geringer Futterwert; 4 = zwischen 3 und 5 stehend; 5 = mittlerer Futterwert; 7 = hoher Futterwert; 9 = bester Futterwert</td>
+</tr>
+<tr class="even">
+<td align="left">Vork</td>
+<td align="left">Habitat</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">BioFlor: Vorkommen (Vork). A = Äcker und Gärten; GE = Extensivgrünland; GW = Wirtschaftsgrünland; N = Nichtkulturland und Brachen; W = Waldrand und Säume</td>
+</tr>
+<tr class="odd">
+<td align="left">sla</td>
+<td align="left">Specific leaf area index</td>
+<td align="left">numeric</td>
+<td align="left">mm^2/mg</td>
+<td align="left">Leda: Ist das Verhältnis von frischer Blattfläche und Trockengewicht des Blattes: SLA = Blattfläche / Trockengewicht des Blattes, in mm2/mg.</td>
+</tr>
+<tr class="even">
+<td align="left">ch</td>
+<td align="left">Height</td>
+<td align="left">numeric</td>
+<td align="left">m</td>
+<td align="left">Leda: Wuchshöhe in m.</td>
+</tr>
+<tr class="odd">
+<td align="left">sm</td>
+<td align="left">Seed weight</td>
+<td align="left">numeric</td>
+<td align="left">mg</td>
+<td align="left">Leda: Samengewicht in mg.</td>
+</tr>
+<tr class="even">
+<td align="left">lf</td>
+<td align="left">Growing form</td>
+<td align="left">factor</td>
+<td align="left">-</td>
+<td align="left">Leda: Die Wuchsform ist eine Kombination der Lebensfrom-klassifizierung von Raunkiaer ergänzt mit anderen Spezialformen basierend auf ihrer Morphologie (z.B. Epiphyten) oder ihrer Lebensraums (z.B. Habitat).</td>
 </tr>
 </tbody>
 </table>

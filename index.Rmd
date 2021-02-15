@@ -28,7 +28,7 @@ R_pos_temp        <- readr::read_csv(file = "docs/GitHub-documentation_files/doc
 raw_moist         <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_moistmeasure_moisture.csv", col_names = T)
 raw_pos_snow      <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_pos_snow.csv", col_names = T)
 raw_pos_veg       <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_pos_vegetation.csv", col_names = T)
-raw_species_info  <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_species_information.csv", col_names = T)
+R_species_info    <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_R_species_information.csv", col_names = T)
 raw_vig           <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_vigmeasure_vigour.csv", col_names = T)
 raw_frost         <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_frostmeasure_freezingresistance.csv", col_names = T)
 raw_soil          <- readr::read_csv(file = "docs/GitHub-documentation_files/doc_raw_pos_soil.csv", col_names = T)

@@ -48,10 +48,10 @@ knitr::kable(
 )
 ```
 
-Vegetation survey data can be joined with species information data. The described columns are available in the data file `raw_species_information.csv`, which contains information on the surveyed species.
+Vegetation survey data can be joined with species information data. The described columns are available in the data file `R_species_information.csv`, which contains information on the surveyed species.
 ```{r tidy = FALSE, echo = FALSE}
 knitr::kable(
-  raw_species_info,
+  R_species_info,
   booktabs = TRUE
 )
 ```
