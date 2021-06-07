@@ -1,5 +1,5 @@
 --- 
-title: "Documentation master thesis"
+title: "Documentation CareyNardus2021"
 author: "Raphael S. von Büren"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
