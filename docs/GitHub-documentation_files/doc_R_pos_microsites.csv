@@ -1,0 +1,66 @@
+﻿Column,Name,Datatype,Unit,Description
+ID_position,Identification number of the microsite,numeric,-,"All the different microsites (n = 115). Used as connection element. At each microsite, temperatures were measured 2-3 cm below ground using one T logger (iButtons) per microsite."
+ID_site,Identification numer of the site,numeric,-,"All the different sites of the observational study (n = 15 ), where each site (approx. 10 x 15 m) contains several microsites along a snowmelt gradient (clustered microsites)."
+GPS_x,GPS coordinate (longitude),numeric,meters,"Longitudinal GPS coordinate (CH1903+ / LV95) of the site (not the microsite), measured with an iPhone 8 using Altimeter+ (iOS App)."
+GPS_x_accur,Accuracy of GPS coordinate (longitude),numeric,meters,Accuracy of longitudinal GPS coordinate.
+GPS_y,GPS coordinate (latitude),numeric,meters,"Latitudinal GPS coordinate (CH1903+ / LV95) of the site (not the microsite), measured with an iPhone 8 using Altimeter+ (iOS App)."
+GPS_y_accur,Accuracy of GPS coordinate (latitude),numeric,meters,Accuracy of latitudinal GPS coordinate.
+elevation,Elevation,numeric,meters above sea level,"Elevation of the site (not the microsite), measured with an iPhone 8 using Altimeter+ (iOS App)."
+macroexposure_d,Macroexposure in degrees,numeric,degrees,"Exposure of the whole site (in degrees), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
+macroexposure,Macroexposure as geographic direction,factor,-,"Exposure of the whole site (geographic direction), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
+slope,Slope,numeric,degrees,"Slope of the microsite, measured with a 50cm-board and an iPhone 8 using Protractor (iOS App)."
+exposure_d,Exposure in degrees,numeric,degrees,"Exposure of the microsite (in degrees), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
+exposure,Exposure as geographic direction,factor,-,"Exposure of the microsite (geographic direction), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
+microtopography,Micro-topography,factor,-,"Micro-topography around the microsite (40x40cm): convex, concave or flat. Estimated by eye."
+wind_edge,Wind-edge,logical,-,Microsite at wind-edge (snow blown away during winter): TRUE or FALSE. 
+soil_depth,Soil depth,numeric,centimeters,Mean value of the three soil depth measurements around the microsite (15x15cm). Measured using a 50 cm long metal bar.
+soil_moist,Soil moisture,numeric,Volume percent (Vol%),Mean value of all soil moisture measurements during the season for each microsite. Soil moisture measurements approximately 5 cm next to T logger. Mesurement device: ThetaProbe type ML3.
+ID_species,Identification numer of the species,numeric,-,Identification numer of the plant species (tussock grass) of the microsite under which the temperature logger was burried. Used as connection element.
+species,Species,factor,-,Plant species (tussock grass) of the microsite under which the temperature logger was burried. *Carex curvula (Cc)* or *Nardus stricta (Ns)* or *Helictotrichon versicolor (Hv)* or *Elyna myosuroides (Em)* or *Control (Con)*.
+position_description,Description,character,-,Description of the observational unit and additional notes.
+soil_sample_GMT,Sampling date and time,POSIXct,General mean time (GMT),"Date and time of soil core collection (mixed soil sample of three samples without litter, 0-5 cm, within 15 x 15 cm around the T logger)."
+pH_CaCl2,pH-value in CaCl2,numeric,-,"pH-values from three soil cores (mixed), taken around the T logger position (15x15cm) in 0-5 cm depth, without litter. pH values determined in the lab in a 1 : 2.5 soil / 0.01 M CaCl2 suspension."
+water_soluble_P,Water soluble phosphorus,numeric,mg P per kg soil,"Water soluble phosphorus from three soil cores (mixed), taken around the T logger position (15x15cm) in 0-5 cm depth, without litter. Phosphorus concentration determined in the lab by molybdenum blue method."
+citricacid_soluble_P,Citric acid soluble phosphorus,numeric,mg P per kg soil,"2% citric acid soluble phosphorus from three soil cores (mixed), taken around the T logger position (15x15cm) in 0-5 cm depth, without litter. Phosphorus concentration determined in the lab by molybdenum blue method."
+carbon,Carbon,numeric,mg C per g soil,"Carbon concentration from three soil cores (mixed), taken around the T logger position (15x15cm) in 0-5 cm depth, without litter."
+nitrogen,Nitrogen,numeric,mg N per g soil,"Nitrogen concentration from three soil cores (mixed), taken around the T logger position (15x15cm) in 0-5 cm depth, without litter."
+C_N_ratio,Carbon-to-nitrogen ratio,numeric,-,"Carbon-to-nitrogen ratio (C/N) from three soil cores (mixed), taken around the T logger position (15x15cm) in 0-5 cm depth, without litter. C/N values determined from soil carbon and nitrogen concentrations."
+d13C,Delta 13C,numeric,‰,"Delta 13C value from three soil cores (mixed), taken around the T logger position (15x15cm) in 0-5 cm depth, without litter."
+d15N,Delta 15N,numeric,‰,"Delta 15N value from three soil cores (mixed), taken around the T logger position (15x15cm) in 0-5 cm depth, without litter."
+Temp_min,Annual minimum soil temperature,numeric,degree Celsius,Soil minimum temperature along the whole year (09.2019-09.2020).
+Temp_max,Annual maximum soil temperature,numeric,degree Celsius,Soil maximum temperature along the whole year (09.2019-09.2020).
+Temp_ampl,Annual soil temperature amplitude,numeric,Kelvin,Difference between annual soil minimum and maximum temperature (09.2019-09.2020).
+Temp_ampl_max,Maximum of daily soil temperature amplitudes,numeric,Kelvin,"Maximum of all daily soil temperature amplitudes, which are differences between daily soil minimum and maximum temperatures (09.2019-09.2020)."
+Temp_min_JS,Minimum soil temperature (June to September),numeric,degree Celsius,Soil minimum temperature in the time-span of 01.06.2020 until 01.09.2020.
+Temp_min_snowfree,Minimum soil temperature (snowfree time),numeric,degree Celsius,"Soil minimum temperature in the time-span of one day after snow disappearance until 01.09.2020. Therefore, the position was already exposed to (potential) sun when experiencing this minimum temperature."
+GDH.0_SS,Growing degree hours (≥ 0°C; Septemper to September),numeric,degree hours,Growing heat summation of growing degree hours GDH (≥ 0°C) from 01.09.2019 to 01.09.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+GDH.0_JA,Growing degree hours (≥ 0°C; July to August),numeric,degree hours,Growing heat summation of growing degree hours GDH (≥ 0°C) from 15.07.2020 to 15.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+GDH.0_MA,Growing degree hours (≥ 0°C; March to August),numeric,degree hours,Growing heat summation of growing degree hours GDH (≥ 0°C) from 15.03.2020 to 15.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+GDH.5_SS,Growing degree hours (≥ 5°C; September to September),numeric,degree hours,Growing heat summation of growing degree hours GDH (≥ 5°C) from 01.09.2019 to 01.09.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+GDH.5_JA,Growing degree hours (≥ 5°C; July to August),numeric,degree hours,Growing heat summation of growing degree hours GDH (≥ 5°C) from 15.07.2020 to 15.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+GDH.5_MA,Growing degree hours (≥ 5°C; March to August),numeric,degree hours,Growing heat summation of growing degree hours GDH (≥ 5°C) from 15.03.2020 to 15.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+FDH.0_OA,Freezing degree hours (≤ 0°C; Oct to Aug),numeric,degree hours,Freezing summation of freezing degree hours FDH (≤ 0°C) from 01.10.2019 to 01.08.2020. We used 2-hourly temperature measurements and multiplied them by 2 to get the unit of degree hours.
+wintersnow19_GMT,Snow-in time 2019,POSIXct,General mean time (GMT),Date and time when the position was snowed-in in autumn 2019.  Date and time determined using soil temperature curves of the loggers: Snow insulation --≥ constant 0°C.
+wintersnow19_day,Snow-in day 2019,numeric,days,Snow-in day 2019 --> Use ID_day format here (ID_day: 1 == Date: 01.09.2019).
+snowfree20_GMT,Snow disappearance time 2019/20,POSIXct,General mean time (GMT),"Date and time when the snow disappeared from the position. Mostly due to snowmelt in spring. At wind-exposed ridges, due to wind in winter. Date and time determined using soil temperature curves of the loggers: Snow insulation --≥ constant 0°C."
+snowfree20_day,Snow-disappearance day 2019/20,numeric,days,Snow disappearance day (2019/20) --> Use ID_day format here (ID_day: 1 == Date: 01.09.2019).
+seasonstart20_GMT,Season start time 2020,POSIXct,General mean time (GMT),"Date and time when snow disappeared and soil was not frozen anymore (on wind-edge microsites when soil thaws, on all other microsites at the time of snow disappearance)."
+seasonstart20_day,Season start day 2020,numeric,days,Season start day 2020 --> Use ID_day format here (ID_day: 1 == Date: 01.09.2019).
+wintersnow20_GMT,Snow-in time 2020,POSIXct,General mean time (GMT),Date and time when the position was snowed-in in autumn 2020.  Date and time determined by physical presence at the Furkapass (heavy snow fall).
+wintersnow20_day,Snow-in day 2020,numeric,days,Snow-in day 2020 --> Use ID_day format here (ID_day: 1 == Date: 2019-09-01).
+days_snow19_20,Days with snowcover,numeric,days,Amount of days with continuous snow-cover.
+days_snowfree20,Days without snowcover,numeric,days,Amount of days without continuous snow-cover.
+days_frozen,Days with frozen soil,numeric,days,Amount of days with frozen soil (daily mean soil temperature ≤ -0.3°C).
+days_growper20.1,Days with growing conditions (≥ 0°C),numeric,days,Amount of days with growing conditions (daily mean soil temperature ≥ 0°C) --> growing period.
+days_growper20.5,Days with growing conditions (≥ 5°C),numeric,days,Amount of days with growing conditions (daily mean soil temperature ≥ 5°C) --> growing period.
+Indval_T,Indicator value temperature,numeric,Indicator value (Landolt),"Mean of indicator value for temperature (Landolt) per microsite based on presence-absence data. 1 = cold, 5 = warm."
+Indval_N,Indicator value nitrogen,numeric,Indicator value (Landolt),"Mean of indicator value for nitrogen (Landolt) per microsite based on presence-absence data. 1 = infertile, 5 = fertile."
+Indval_L,Indicator value light,numeric,Indicator value (Landolt),"Mean of indicator value for light (Landolt) per microsite based on presence-absence data. 1 = shade, 5 = full light."
+Indval_F,Indicator value moisture,numeric,Indicator value (Landolt),"Mean of indicator value for moisture (Landolt) per microsite based on presence-absence data. 1 = dry, 5 = wet."
+Indval_H,Indicator value organic material,numeric,Indicator value (Landolt),"Mean of indicator value for organic material (Landolt) per microsite based on presence-absence data. 1 = bare soil, 5 = raw humus."
+Indval_R,Indicator value acidity,numeric,Indicator value (Landolt),"Mean of indicator value for acidity (Landolt) per microsite based on presence-absence data. 1 = acidic, 5 = alkaline."
+Carexcurvula,Cover of *Carex curvula*,numeric,-,Cover estimation (percentage of total area) of *Carex curvula* at each microsite (40x40cm around the T logger).
+Nardusstricta,Cover of *Nardus stricta*,numeric,-,Cover estimation (percentage of total area) of *Nardus stricta* at each microsite (40x40cm around the T logger).
+Achilleaerbarotta,Cover of *Achillea erba-rotta*,numeric,-,Cover estimation (percentage of total area) of *Achillea erba-rotta* at each microsite (40x40cm around the T logger).
+Adenostylesalliariae,(...),numeric,-,"Cover estimation (percentage of total area) of n = 86 plants (all observed plants, one species per column, alphabetically) at each microsite (40x40cm around the T logger)."
+Veronicabellidioides,Cover of *Veronica bellidioides*,numeric,-,Cover estimation (percentage of total area) of *Veronica bellidioides* at each microsite (40x40cm around the T logger).

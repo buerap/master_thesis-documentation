@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Documentation master thesis</a></li>
+        <li><a href="./">Documentation CarexNardus2021</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf"]  #, "epub"] (ich will hier kein epub erstellen)

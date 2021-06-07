@@ -8,7 +8,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "Documentation of master thesis of Raphael S. von Büren, Department of Environmental Sciences, University of Basel. Supervised by Dr. Erika Hiltbrunner and Prof. Dr. Ansgar Kahmen."
+description: "Documentation of CarexNardus2021 study of Raphael S. von Büren and Erika Hiltbrunner, Department of Environmental Sciences, University of Basel."
 ---
 
 ```{r setup-index, include = FALSE, message = FALSE}
@@ -37,7 +37,7 @@ raw_soil          <- readr::read_csv(file = "docs/GitHub-documentation_files/doc
 
 # Prerequisites {}
 
-This is a documentation book, providing details on **data structure** and **analyses** of the the master thesis "Habitat-demands, micro-climate and freezing resistance of the tussock graminoids _Carex curvula_ and _Nardus stricta_".
+This is a documentation book, providing details on **data structure** and **analyses** of the project "Contrasting range limits of the most abundant, alpine tussock graminoids _Carex curvula_ and _Nardus stricta_".
 
 The **bookdown** package, used to create this book, can be installed from CRAN or Github:
 

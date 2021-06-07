@@ -1,24 +1,24 @@
 ﻿Column,Name,Datatype,Unit,Description
-ID_position,Identification number of the position,numeric,-,"All the different observational units of the observational study (n = 115), the micro-climatology study for *Carex curvula* (n = 14) and the transplantation study (n = 2). Used as connection element."
-ID_site,Identification numer of the site,numeric,-,"All the different sites of the observational study (n = 15 ), where each site contains several observational units (positions) along a snowmelt gradient. Further, all the sites of the micro-climatology study for *Carex curvula* ( n = 1) and the transplantation study (n = 2)."
-GPS_x,GPS coordinate (longitude),numeric,meters,"Longitudinal GPS coordinate (CH1903+ / LV95) of the position, measured with an iPhone 8 using Altimeter+ (iOS App)."
+ID_position,Identification number of the position,numeric,-,"All the different microsites of the observational study (n = 115), the micro-climatology study for *Carex curvula* (n = 14) and the transplantation study (n = 2). Used as connection element."
+ID_site,Identification numer of the site,numeric,-,"All the different sites of the observational study (n = 15 ), where each site (approx. 10 x 15 m) contains several microsites (microsites) along a snowmelt gradient. Further, all the sites of the micro-climatology study for *Carex curvula* ( n = 1) and the transplantation study (n = 2)."
+GPS_x,GPS coordinate (longitude),numeric,meters,"Longitudinal GPS coordinate (CH1903+ / LV95) of the site (not the microsite), measured with an iPhone 8 using Altimeter+ (iOS App)."
 GPS_x_accur,Accuracy of GPS coordinate (longitude),numeric,meters,Accuracy of longitudinal GPS coordinate.
-GPS_y,GPS coordinate (latitude),numeric,meters,"Latitudinal GPS coordinate (CH1903+ / LV95) of the position, measured with an iPhone 8 using Altimeter+ (iOS App)."
+GPS_y,GPS coordinate (latitude),numeric,meters,"Latitudinal GPS coordinate (CH1903+ / LV95) of the site (not the microsite), measured with an iPhone 8 using Altimeter+ (iOS App)."
 GPS_y_accur,Accuracy of GPS coordinate (latitude),numeric,meters,Accuracy of latitudinal GPS coordinate.
-elevation,Elevation,numeric,meters above sea level,"Elevation of the position, measured with an iPhone 8 using Altimeter+ (iOS App)."
+elevation,Elevation,numeric,meters above sea level,"Elevation of the site (not the microsite), measured with an iPhone 8 using Altimeter+ (iOS App)."
 macroexposure_d,Macroexposure in degrees,numeric,degrees,"Exposure of the whole site (in degrees), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
 macroexposure,Macroexposure as geographic direction,factor,-,"Exposure of the whole site (geographic direction), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
-slope,Slope,numeric,degrees,"Slope of the position, measured with a 50cm-board and an iPhone 8 using Protractor (iOS App)."
-exposure_d,Exposure in degrees,numeric,degrees,"Exposure of the position (in degrees), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
-exposure,Exposure as geographic direction,factor,-,"Exposure of the position (geographic direction), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
-topography,Topography,factor,-,"Micro-topography around the position (40x40cm): convex, concave or flat. Estimated by eye."
-soil_depth1,Soil depth measurement 1,numeric,centimeters,"Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 1)."
-soil_depth2,Soil depth measurement 2,numeric,centimeters,"Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 2)."
-soil_depth3,Soil depth measurement 3,numeric,centimeters,"Soil depth around the position (15x15cm), measured using a 60cm long metal bar (measurement 3)."
-soil_depth_mean,Soil depth mean of measurements 1-3,numeric,centimeters,Mean value of the three soil depth measurements around the position (15x15cm).
-ID_species,Identification numer of the species,numeric,-,Identification numer of the plant species (tussock grass) of the position under which the temperature logger was burried. Used as connection element.
-species,Species,factor,-,Plant species (tussock grass) of the position under which the temperature logger was burried. *Carex curvula (Cc)* or *Nardus stricta (Ns)* or *Helictotrichon versicolor (Hv)* or *Elyna myosuroides (Em)* or *Control (Con)*.
-corresp_control,ID_position of corresponding control,numeric,-,"ID_position of a corresponding control logger (within one meter, without tussock). Note: Not every tussock has a control."
+slope,Slope,numeric,degrees,"Slope of the microsite, measured with a 50cm-board and an iPhone 8 using Protractor (iOS App)."
+exposure_d,Exposure in degrees,numeric,degrees,"Exposure of the microsite (in degrees), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
+exposure,Exposure as geographic direction,factor,-,"Exposure of the microsite (geographic direction), measured with a 50cm-board and an iPhone 8 using Compass (iOS App)."
+topography,Topography,factor,-,"Micro-topography around the microsite (40x40cm): convex, concave or flat. Estimated by eye."
+soil_depth1,Soil depth measurement 1,numeric,centimeters,"Soil depth around the microsite (15x15cm), measured using a 60cm long metal bar (measurement 1)."
+soil_depth2,Soil depth measurement 2,numeric,centimeters,"Soil depth around the microsite (15x15cm), measured using a 60cm long metal bar (measurement 2)."
+soil_depth3,Soil depth measurement 3,numeric,centimeters,"Soil depth around the microsite (15x15cm), measured using a 60cm long metal bar (measurement 3)."
+soil_depth_mean,Soil depth mean of measurements 1-3,numeric,centimeters,Mean value of the three soil depth measurements around the microsite (15x15cm).
+ID_species,Identification numer of the species,numeric,-,Identification numer of the plant species (tussock grass) of the microsite under which the temperature logger was burried. Used as connection element.
+species,Species,factor,-,Plant species (tussock grass) of the microsite under which the temperature logger was burried. *Carex curvula (Cc)* or *Nardus stricta (Ns)* or *Helictotrichon versicolor (Hv)* or *Elyna myosuroides (Em)* or *Control (Con)*.
+corresp_control,ID_microsite of corresponding control,numeric,-,"ID_position of a corresponding control logger (within one meter, without tussock). Note: Not every tussock has a control."
 control_spec_1,Controlled species 1,factor,-,"Species abbreviation of species 1, which is controlled by this control logger here."
 control_spec_2,Controlled species 2,factor,-,"Species abbreviation of species 2, which is controlled by this control logger here."
 control_spec_3,Controlled species 3,factor,-,"Species abbreviation of species 3, which is controlled by this control logger here."

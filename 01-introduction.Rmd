@@ -1,7 +1,7 @@
 # Introduction {#intro}
 
 ## Background {}
-*Carex curvula* and *Nardus stricta* are the most abundant tussock forming graminoid species in acidic, alpine grassland across the European Alps. It is unknown where and why one of the two species dominates in the alpine landscape or where they occur together. We explore the habitat requirements of both species and assess whether a distinct freezing resistance explains the distribution of these two species.
+*Carex curvula* and *Nardus stricta* are the most abundant tussock forming graminoid species in acidic, alpine grassland across the European Alps. It is unknown where and why one of the two species dominates in the alpine landscape or where they occur together. We explore the physiological range limits of both species and assess whether a distinct freezing resistance explains the distribution of these two species.
 
 ## Questions {}
 • Which micro-habitat conditions select for either one of the two graminoids?
@@ -9,23 +9,14 @@
 • Are the habitat requirements related to the freezing resistance in the two species?
 
 ## Methods {}
-We assessed the occurrence, abundance and vigour of both graminoid species in 115 sites, situated between 2195 - 2805 m asl (Swiss central Alps). Sites differ in elevation, topography (concave - convex), exposure, slope inclination, soil depth, soil moisture and vegetation composition. In addition to these site characteristics, we measured:
+We assessed the occurrence, abundance and vigour of both graminoid species in 115 sites, situated between 2195 - 2805 m asl (Swiss central Alps). Microsites differ in elevation, topography, exposure, slope, soil depth, soil moisture and vegetation composition. In addition to these site characteristics, we measured:
 
 • Soil temperature (iButton T-logger, 3 cm below ground, Sept 2019 - Sept 2020, hourly)
 
-• Cover of *Carex* and *Nardus* (40 x 40 cm around data logger)
+• Vegetation composition, including cover of *Carex* and *Nardus* (40 x 40 cm around data logger)
 
 • Freezing resistance in leaves using electrolyte leakage
-method after exposing leaves to freezing temperatures from -5 to -24 °C
+method and of shoots using TTC-vital staining method.
 
 ## Acknowledgements {}
-ALPFOR research station, with special thanks to Christian Körner, Corinne Bloch, Lukas Zimmermann, Patrick Möhl and Svenja Förster.
-
-## Funding {}
-• FAG BASEL: Fonds zur Förderung von Lehre und Forschung
-
-• MATHIEU-STIFTUNG Universität Basel
-
-
-
-
+ALPFOR research station, FAG BASEL (Fonds zur Förderung von Lehre und Forschung), MATHIEU-STIFTUNG of the University of Basel.

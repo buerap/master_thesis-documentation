@@ -1,6 +1,6 @@
 # Data structure {}
 
-Here, all data files used for the analyses are described. The tables are available under `https://github.com/buerap/master_thesis`.
+Here, all data files used for the analyses are described. Data files are available under `https://github.com/buerap/CarexNardus2021`.
 
 ## Observational units {}
 ### Characteristics {}
